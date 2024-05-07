@@ -1,0 +1,86 @@
+\doxysection{lib\+\_\+\+Sfml.\+hpp}
+\hypertarget{lib___sfml_8hpp_source}{}\label{lib___sfml_8hpp_source}\index{src/Graphic/Sfml/lib\_Sfml.hpp@{src/Graphic/Sfml/lib\_Sfml.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_graphic_8hpp}{../IGraphic.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <SFML/Audio.hpp>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_l_i_b___s_f_m_l}{LIB\_SFML}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_graphic}{IGraphic}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loader}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a1393818332bc3b68b36a073ef0124295}{LIB\_SFML}}();\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a6450ba890b7c85043746131fc934ef13}{\string~LIB\_SFML}}();\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Init}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a761af8ae9b4b7d06675337710cf12cde}{init}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Menu}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_af82a3773cec9eb2a17651c45d1edf46f}{main\_menu}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_aee3315bbb0b8fef1c92cb7a98f20f456}{end\_menu}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{playerName}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{score}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a3566155437a00efe3650ca7adfc3dbce}{pause\_menu}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_ad41a1474ae39f04172563c3f0a202516}{settings\_menu}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_abadd01176991f046cf7d7b054dc30e6d}{game\_menu}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector}}<\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::tuple<char,\ std::string,\ int,\ int>}}>\ \_gameMap,\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{nameGame}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a83d290cd52c364a0c35d80677ffecf81}{draw\_game}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a6fe2e3792bd482c27f54ba729119bf24}{draw\_score}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a7757827bba7b9c86f3e378f583480e3b}{draw\_playerName}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_ab49d59575e59938213c9a3f6fb2544c7}{draw\_allSprite}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a683102cb9ce5cd7ab72006cfd2c1d305}{draw\_map}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector}}<\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::tuple<char,\ std::string,\ int,\ int>}}>\ \_gameMap,\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{nameGame}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Event}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_aca6bb8515c8853e17def2542f2aa02fb}{stop}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_ad9f573252b139c9e5ed97303369db036}{pause}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a9b440f02d90cffb8cf14a29886b852d4}{clear}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a4c5b385bb9ff6efddeddb46d1268f647}{close}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a0556ec27e167254a66c933b479eabf9d}{update}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sound}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a678d054c938dc799ecb30fd9b4d7999b}{sound}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{pathMusic}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{volume}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_aa27e13d70762b446f3175a04a047a7f6}{set\_volume}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{value}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setter}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a6d0ba78dd7f984f273e8323c2e6d47b5}{set\_playerName}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{name}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a87a2d763718d4f0e0de64f4f24ce6b1f}{set\_selectedItem}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{index}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_abf46234e9d770db479e729f24971ff11}{set\_nameLib}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{lib}})\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getter}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a63c5108eba048c757681855db87ed4c4}{get\_playerName}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a4905d124d8fb0133f5df89382eabf291}{get\_selectedItem}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_l_i_b___s_f_m_l_a1ccd5c7a9f37ff68ee904079f6aa819b}{get\_nameLib}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::RenderWindow}}*\ window;\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::Event}}\ event;\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::Font}}\ font;\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::Texture}}\ backgroundTexture;\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::Sprite}}\ backgroundSprite;\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<sf::Text>}}\ menuItems;\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<sf::Text>}}\ pauseItems;\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<sf::Text>}}\ settingsItems;\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<sf::Text>}}\ endItems;\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \_playerName;\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_writen;\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_playgame;\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{sf::Music}}\ music;\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_selectedItem;\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \_nameLib;\ }
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}{typeMenu}}}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180}{mainMenu}},\ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d}{inGame}},\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca}{pauseMenu}},\ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47}{settingsMenu}},\ }
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964}{endMenu}}\ }
+\DoxyCodeLine{00113\ \};}
+
+\end{DoxyCode}

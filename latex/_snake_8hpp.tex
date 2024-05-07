@@ -1,0 +1,194 @@
+\doxysection{src/\+Game/\+Snake/\+Snake.hpp File Reference}
+\hypertarget{_snake_8hpp}{}\label{_snake_8hpp}\index{src/Game/Snake/Snake.hpp@{src/Game/Snake/Snake.hpp}}
+
+
+EPITECH PROJECT, 2024.  
+
+
+{\ttfamily \#include "{}../\+IGame\+Lib.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_snake}{Snake}}
+\begin{DoxyCompactList}\small\item\em Implementation of the \doxylink{class_snake}{Snake} game logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098}{direction}} \{ \newline
+\mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a}{top}}
+, \mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296}{down}}
+, \mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0}{left}}
+, \mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a}{right}}
+, \newline
+\mbox{\hyperlink{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0}{none}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different directions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}} \{ \mbox{\hyperlink{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da04f1b071f494983129aefb83ff7e90bd}{head}}
+, \mbox{\hyperlink{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da441239ef907ce5dd02c6c1f5c35fb1d5}{body}}
+, \mbox{\hyperlink{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da0a43f55b88ad4afbeb0ded9f5e748d0a}{tail}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different types of \doxylink{class_snake}{Snake} elements. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90}{state}} \{ \newline
+\mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90ab110da32531ee3b7a96e7d39d1e3acf8}{head\+\_\+up}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1a2c3605bdff6cb7c0e66459decf3140}{head\+\_\+down}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90af0ee8c575c9eec5b44d400a0f25ac117}{head\+\_\+left}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a323acb93a9dab444d160bdc5991a4aca}{head\+\_\+right}}
+, \newline
+\mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1fff443856da61f95171c686081f48d2}{body\+\_\+vertical}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a5c6692f375f62cede8b8566e7dd41605}{body\+\_\+horizontal}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a6328284b1b8e38ed106b9cab61212c47}{body\+\_\+topleft}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a54f2f17a9d277168601fb03223175c48}{body\+\_\+topright}}
+, \newline
+\mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a95b44b3f0f08b8fd53a8cef713e6f193}{body\+\_\+bottomleft}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a068abf7b129c92f2cb1c40731fd5e85a}{body\+\_\+bottomright}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a7b06702655fcd4e8e908510af0bc91d8}{tail\+\_\+up}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a424bd2bce50a6cb97ff209757ddfa093}{tail\+\_\+down}}
+, \newline
+\mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a9c5fdfd446f4ee9e8867864883145a46}{tail\+\_\+left}}
+, \mbox{\hyperlink{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90afe045cb390c9bbb4123445bcbf41d0df}{tail\+\_\+right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different states of \doxylink{class_snake}{Snake} elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+EPITECH PROJECT, 2024. 
+
+\begin{DoxyAuthor}{Author}
+COUSTABEAU Maxime / MIGLIANI Benjamin / LAMAN-\/\+DUFLOT Ilhan (\href{mailto:maxime.coustabeau@epitech.eu}{\texttt{ maxime.\+coustabeau@epitech.\+eu}} / \href{mailto:benjamin.migliani@epitech.eu}{\texttt{ benjamin.\+migliani@epitech.\+eu}} / \href{mailto:Ilhan.laman-duflot@epitech.eu}{\texttt{ Ilhan.\+laman-\/duflot@epitech.\+eu}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\doxylink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{0.\+1} 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/03-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098} 
+\index{Snake.hpp@{Snake.hpp}!direction@{direction}}
+\index{direction@{direction}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098}{direction}}}
+
+
+
+Enumeration for different directions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{top@{top}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!top@{top}}}\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a} 
+top&Up direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{down@{down}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!down@{down}}}\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296} 
+down&Down direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{left@{left}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!left@{left}}}\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0} 
+left&Left direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{right@{right}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!right@{right}}}\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a} 
+right&Right direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!none@{none}}}\Hypertarget{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0}\label{_snake_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0} 
+none&No direction. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90} 
+\index{Snake.hpp@{Snake.hpp}!state@{state}}
+\index{state@{state}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90}{state}}}
+
+
+
+Enumeration for different states of \doxylink{class_snake}{Snake} elements. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{head\_up@{head\_up}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!head\_up@{head\_up}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90ab110da32531ee3b7a96e7d39d1e3acf8}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90ab110da32531ee3b7a96e7d39d1e3acf8} 
+head\+\_\+up&Head facing up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{head\_down@{head\_down}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!head\_down@{head\_down}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1a2c3605bdff6cb7c0e66459decf3140}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1a2c3605bdff6cb7c0e66459decf3140} 
+head\+\_\+down&Head facing down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{head\_left@{head\_left}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!head\_left@{head\_left}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90af0ee8c575c9eec5b44d400a0f25ac117}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90af0ee8c575c9eec5b44d400a0f25ac117} 
+head\+\_\+left&Head facing left. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{head\_right@{head\_right}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!head\_right@{head\_right}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a323acb93a9dab444d160bdc5991a4aca}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a323acb93a9dab444d160bdc5991a4aca} 
+head\+\_\+right&Head facing right. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_vertical@{body\_vertical}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_vertical@{body\_vertical}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1fff443856da61f95171c686081f48d2}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1fff443856da61f95171c686081f48d2} 
+body\+\_\+vertical&Vertical body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_horizontal@{body\_horizontal}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_horizontal@{body\_horizontal}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a5c6692f375f62cede8b8566e7dd41605}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a5c6692f375f62cede8b8566e7dd41605} 
+body\+\_\+horizontal&Horizontal body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_topleft@{body\_topleft}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_topleft@{body\_topleft}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a6328284b1b8e38ed106b9cab61212c47}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a6328284b1b8e38ed106b9cab61212c47} 
+body\+\_\+topleft&Top-\/left corner body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_topright@{body\_topright}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_topright@{body\_topright}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a54f2f17a9d277168601fb03223175c48}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a54f2f17a9d277168601fb03223175c48} 
+body\+\_\+topright&Top-\/right corner body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_bottomleft@{body\_bottomleft}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_bottomleft@{body\_bottomleft}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a95b44b3f0f08b8fd53a8cef713e6f193}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a95b44b3f0f08b8fd53a8cef713e6f193} 
+body\+\_\+bottomleft&Bottom-\/left corner body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body\_bottomright@{body\_bottomright}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body\_bottomright@{body\_bottomright}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a068abf7b129c92f2cb1c40731fd5e85a}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a068abf7b129c92f2cb1c40731fd5e85a} 
+body\+\_\+bottomright&Bottom-\/right corner body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tail\_up@{tail\_up}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!tail\_up@{tail\_up}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a7b06702655fcd4e8e908510af0bc91d8}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a7b06702655fcd4e8e908510af0bc91d8} 
+tail\+\_\+up&Tail facing up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tail\_down@{tail\_down}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!tail\_down@{tail\_down}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a424bd2bce50a6cb97ff209757ddfa093}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a424bd2bce50a6cb97ff209757ddfa093} 
+tail\+\_\+down&Tail facing down. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tail\_left@{tail\_left}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!tail\_left@{tail\_left}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a9c5fdfd446f4ee9e8867864883145a46}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a9c5fdfd446f4ee9e8867864883145a46} 
+tail\+\_\+left&Tail facing left. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tail\_right@{tail\_right}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!tail\_right@{tail\_right}}}\Hypertarget{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90afe045cb390c9bbb4123445bcbf41d0df}\label{_snake_8hpp_adc6e5733fc3c22f0a7b2914188c49c90afe045cb390c9bbb4123445bcbf41d0df} 
+tail\+\_\+right&Tail facing right. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2d}\label{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2d} 
+\index{Snake.hpp@{Snake.hpp}!type@{type}}
+\index{type@{type}!Snake.hpp@{Snake.hpp}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_nibbler_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}}}
+
+
+
+Enumeration for different types of \doxylink{class_snake}{Snake} elements. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{head@{head}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!head@{head}}}\Hypertarget{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da04f1b071f494983129aefb83ff7e90bd}\label{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da04f1b071f494983129aefb83ff7e90bd} 
+head&\doxylink{class_snake}{Snake} head. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{body@{body}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!body@{body}}}\Hypertarget{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da441239ef907ce5dd02c6c1f5c35fb1d5}\label{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da441239ef907ce5dd02c6c1f5c35fb1d5} 
+body&\doxylink{class_snake}{Snake} body segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tail@{tail}!Snake.hpp@{Snake.hpp}}\index{Snake.hpp@{Snake.hpp}!tail@{tail}}}\Hypertarget{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da0a43f55b88ad4afbeb0ded9f5e748d0a}\label{_snake_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da0a43f55b88ad4afbeb0ded9f5e748d0a} 
+tail&\doxylink{class_snake}{Snake} tail. \\
+\hline
+
+\end{DoxyEnumFields}

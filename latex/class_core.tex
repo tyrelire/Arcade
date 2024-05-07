@@ -1,0 +1,278 @@
+\doxysection{Core Class Reference}
+\hypertarget{class_core}{}\label{class_core}\index{Core@{Core}}
+
+
+\doxylink{class_core}{Core} class responsible for managing the main game loop and coordinating interactions between graphics and game logic.  
+
+
+
+
+{\ttfamily \#include $<$ICore.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_core_a14e63188e0aa7c4a6f72d5501384d1f9}\label{class_core_a14e63188e0aa7c4a6f72d5501384d1f9} 
+{\bfseries Core} ()
+\begin{DoxyCompactList}\small\item\em Constructor for initializing the \doxylink{class_core}{Core}. \end{DoxyCompactList}\item 
+\Hypertarget{class_core_a776f8c46504b14183883c6273f93eaed}\label{class_core_a776f8c46504b14183883c6273f93eaed} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Core} ()
+\begin{DoxyCompactList}\small\item\em Destructor for cleaning up resources used by the \doxylink{class_core}{Core}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a34116c84cb00df5f516fc72bd9dcba63}{run}} (\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dl}}, \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dlG}})
+\begin{DoxyCompactList}\small\item\em Runs the main game loop. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a159ba93b4cd7caae4ff68762c9c31f6f}{update\+\_\+menu}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} event, \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dl}}, \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dlG}})
+\begin{DoxyCompactList}\small\item\em Updates the menu based on the given event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a29c6aa15c0e6420c38b56ea9b1cee4db}{switch\+Lib}} (\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dl}}, \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{lib}})
+\begin{DoxyCompactList}\small\item\em Switches the graphics library being used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a7e7640addefb4b0c4299d3938b93041f}{switch\+Game}} (\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{dl}}, \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{game}})
+\begin{DoxyCompactList}\small\item\em Switches the game library being used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_ae44978b65bdb9823c3649ce8dc688290}{set\+\_\+is\+Running}} (\mbox{\hyperlink{class_loader}{bool}} \mbox{\hyperlink{class_core_a34116c84cb00df5f516fc72bd9dcba63}{run}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a46ec28a5c822bbe5205aa7055691fd12}{set\+\_\+which\+Menu}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{menu}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a433ccff735cb239a48e418eb3403aa2c}{set\+\_\+which\+Old\+Menu}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{menu}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a8f3e5dc324c0da935b9a1a3751ce943f}{set\+\_\+volume}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{value}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_aa49939c2b7fe8abfe374bb2ceb489bc9}{set\+\_\+player\+Name}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{name}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a1ba3da543b5f5fdad74325475a108984}{set\+\_\+path\+Music}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{name}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a728961e5747f607729719633ecdf595e}{set\+\_\+score}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{value}})
+\item 
+\mbox{\hyperlink{class_loader}{bool}} \mbox{\hyperlink{class_core_a938b7bdbc5cd82dfcba5490657c5ea0d}{get\+\_\+is\+Running}} ()
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_core_a90e0697aff94e7f3884ff720759183e1}{get\+\_\+which\+Menu}} ()
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_core_a40479aef6132cd31f4b2b9906c2bab5b}{get\+\_\+which\+Old\+Menu}} ()
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_core_a85026e3c2932bef1bd4ad9f9997c893c}{get\+\_\+volume}} ()
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_core_aac51a9b309ffe6b419a548a613d80686}{get\+\_\+player\+Name}} ()
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_core_a2213b0b75d87920c9bae8b81f0fa2f45}{get\+\_\+path\+Music}} ()
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_core_ad5c4c027999e05f412862b0bb3c7c0a9}{get\+\_\+score}} ()
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a4a098267ad0c07bf8f92dc8ed3d98cec}{set\+Display}} (\mbox{\hyperlink{class_i_graphic}{IGraphic}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{display}})
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_core_a65cb5a705a120f55853c0077fdfe18f2}{set\+Game}} (\mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{game}})
+\item 
+\mbox{\hyperlink{class_i_graphic}{IGraphic}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_core_a877fb8da5ca0672733d469c4d77fdb63}{get\+Display}} () \mbox{\hyperlink{class_loader}{const}}
+\item 
+\mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_core_ab5bcfd95a1d0e8d6b7b89e59a9fec133}{get\+Game}} () \mbox{\hyperlink{class_loader}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_graphic}{IGraphic}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_core_af73b0ddac8d91c98e06a941ec980e528}{\+\_\+display}}
+\item 
+\mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_core_a1ef1c833207ab45aa58eb4d1212192aa}{\+\_\+game}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_core}{Core} class responsible for managing the main game loop and coordinating interactions between graphics and game logic. 
+
+This class orchestrates the main game loop, handles user input, and manages interactions between the graphics interface and game logic. It provides methods for running the game, updating menus, switching between graphics libraries and game implementations, and setting/getting various game parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_core_a938b7bdbc5cd82dfcba5490657c5ea0d}\label{class_core_a938b7bdbc5cd82dfcba5490657c5ea0d} 
+\index{Core@{Core}!get\_isRunning@{get\_isRunning}}
+\index{get\_isRunning@{get\_isRunning}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_isRunning()}{get\_isRunning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{bool}} Core\+::get\+\_\+is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the running state of the game. \Hypertarget{class_core_a2213b0b75d87920c9bae8b81f0fa2f45}\label{class_core_a2213b0b75d87920c9bae8b81f0fa2f45} 
+\index{Core@{Core}!get\_pathMusic@{get\_pathMusic}}
+\index{get\_pathMusic@{get\_pathMusic}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_pathMusic()}{get\_pathMusic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} Core\+::get\+\_\+path\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the path to the music file. \Hypertarget{class_core_aac51a9b309ffe6b419a548a613d80686}\label{class_core_aac51a9b309ffe6b419a548a613d80686} 
+\index{Core@{Core}!get\_playerName@{get\_playerName}}
+\index{get\_playerName@{get\_playerName}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_playerName()}{get\_playerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} Core\+::get\+\_\+player\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the player\textquotesingle{}s name. \Hypertarget{class_core_ad5c4c027999e05f412862b0bb3c7c0a9}\label{class_core_ad5c4c027999e05f412862b0bb3c7c0a9} 
+\index{Core@{Core}!get\_score@{get\_score}}
+\index{get\_score@{get\_score}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_score()}{get\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Core\+::get\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the player\textquotesingle{}s score. \Hypertarget{class_core_a85026e3c2932bef1bd4ad9f9997c893c}\label{class_core_a85026e3c2932bef1bd4ad9f9997c893c} 
+\index{Core@{Core}!get\_volume@{get\_volume}}
+\index{get\_volume@{get\_volume}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_volume()}{get\_volume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Core\+::get\+\_\+volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the volume level. \Hypertarget{class_core_a90e0697aff94e7f3884ff720759183e1}\label{class_core_a90e0697aff94e7f3884ff720759183e1} 
+\index{Core@{Core}!get\_whichMenu@{get\_whichMenu}}
+\index{get\_whichMenu@{get\_whichMenu}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_whichMenu()}{get\_whichMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Core\+::get\+\_\+which\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the current menu state. \Hypertarget{class_core_a40479aef6132cd31f4b2b9906c2bab5b}\label{class_core_a40479aef6132cd31f4b2b9906c2bab5b} 
+\index{Core@{Core}!get\_whichOldMenu@{get\_whichOldMenu}}
+\index{get\_whichOldMenu@{get\_whichOldMenu}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{get\_whichOldMenu()}{get\_whichOldMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Core\+::get\+\_\+which\+Old\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the previous menu state. \Hypertarget{class_core_a877fb8da5ca0672733d469c4d77fdb63}\label{class_core_a877fb8da5ca0672733d469c4d77fdb63} 
+\index{Core@{Core}!getDisplay@{getDisplay}}
+\index{getDisplay@{getDisplay}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{getDisplay()}{getDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_graphic}{IGraphic}} \texorpdfstring{$\ast$}{*} Core\+::get\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the graphics interface. \Hypertarget{class_core_ab5bcfd95a1d0e8d6b7b89e59a9fec133}\label{class_core_ab5bcfd95a1d0e8d6b7b89e59a9fec133} 
+\index{Core@{Core}!getGame@{getGame}}
+\index{getGame@{getGame}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{getGame()}{getGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} \texorpdfstring{$\ast$}{*} Core\+::get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the game logic. \Hypertarget{class_core_a34116c84cb00df5f516fc72bd9dcba63}\label{class_core_a34116c84cb00df5f516fc72bd9dcba63} 
+\index{Core@{Core}!run@{run}}
+\index{run@{run}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}}]{dl,  }\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}}]{dlG }\end{DoxyParamCaption})}
+
+
+
+Runs the main game loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & Pointer to the loader for graphics libraries. \\
+\hline
+{\em dlG} & Pointer to the loader for game libraries. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_core_ae44978b65bdb9823c3649ce8dc688290}\label{class_core_ae44978b65bdb9823c3649ce8dc688290} 
+\index{Core@{Core}!set\_isRunning@{set\_isRunning}}
+\index{set\_isRunning@{set\_isRunning}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_isRunning()}{set\_isRunning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+is\+Running (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{bool}}}]{run }\end{DoxyParamCaption})}
+
+Sets the running state of the game. \Hypertarget{class_core_a1ba3da543b5f5fdad74325475a108984}\label{class_core_a1ba3da543b5f5fdad74325475a108984} 
+\index{Core@{Core}!set\_pathMusic@{set\_pathMusic}}
+\index{set\_pathMusic@{set\_pathMusic}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_pathMusic()}{set\_pathMusic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+path\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{name }\end{DoxyParamCaption})}
+
+Sets the path to the music file. \Hypertarget{class_core_aa49939c2b7fe8abfe374bb2ceb489bc9}\label{class_core_aa49939c2b7fe8abfe374bb2ceb489bc9} 
+\index{Core@{Core}!set\_playerName@{set\_playerName}}
+\index{set\_playerName@{set\_playerName}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_playerName()}{set\_playerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+player\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{name }\end{DoxyParamCaption})}
+
+Sets the player\textquotesingle{}s name. \Hypertarget{class_core_a728961e5747f607729719633ecdf595e}\label{class_core_a728961e5747f607729719633ecdf595e} 
+\index{Core@{Core}!set\_score@{set\_score}}
+\index{set\_score@{set\_score}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_score()}{set\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{value }\end{DoxyParamCaption})}
+
+Sets the player\textquotesingle{}s score. \Hypertarget{class_core_a8f3e5dc324c0da935b9a1a3751ce943f}\label{class_core_a8f3e5dc324c0da935b9a1a3751ce943f} 
+\index{Core@{Core}!set\_volume@{set\_volume}}
+\index{set\_volume@{set\_volume}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_volume()}{set\_volume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{value }\end{DoxyParamCaption})}
+
+Sets the volume level. \Hypertarget{class_core_a46ec28a5c822bbe5205aa7055691fd12}\label{class_core_a46ec28a5c822bbe5205aa7055691fd12} 
+\index{Core@{Core}!set\_whichMenu@{set\_whichMenu}}
+\index{set\_whichMenu@{set\_whichMenu}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_whichMenu()}{set\_whichMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+which\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{menu }\end{DoxyParamCaption})}
+
+Sets the current menu state. \Hypertarget{class_core_a433ccff735cb239a48e418eb3403aa2c}\label{class_core_a433ccff735cb239a48e418eb3403aa2c} 
+\index{Core@{Core}!set\_whichOldMenu@{set\_whichOldMenu}}
+\index{set\_whichOldMenu@{set\_whichOldMenu}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_whichOldMenu()}{set\_whichOldMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+\_\+which\+Old\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{menu }\end{DoxyParamCaption})}
+
+Sets the previous menu state. \Hypertarget{class_core_a4a098267ad0c07bf8f92dc8ed3d98cec}\label{class_core_a4a098267ad0c07bf8f92dc8ed3d98cec} 
+\index{Core@{Core}!setDisplay@{setDisplay}}
+\index{setDisplay@{setDisplay}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{setDisplay()}{setDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+Display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_graphic}{IGraphic}} \texorpdfstring{$\ast$}{*}}]{display }\end{DoxyParamCaption})}
+
+Sets the graphics interface. \Hypertarget{class_core_a65cb5a705a120f55853c0077fdfe18f2}\label{class_core_a65cb5a705a120f55853c0077fdfe18f2} 
+\index{Core@{Core}!setGame@{setGame}}
+\index{setGame@{setGame}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{setGame()}{setGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::set\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} \texorpdfstring{$\ast$}{*}}]{game }\end{DoxyParamCaption})}
+
+Sets the game logic. \Hypertarget{class_core_a7e7640addefb4b0c4299d3938b93041f}\label{class_core_a7e7640addefb4b0c4299d3938b93041f} 
+\index{Core@{Core}!switchGame@{switchGame}}
+\index{switchGame@{switchGame}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{switchGame()}{switchGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::switch\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}}]{dl,  }\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}}]{game }\end{DoxyParamCaption})}
+
+
+
+Switches the game library being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & Pointer to the loader for game libraries. \\
+\hline
+{\em game} & The name of the game library to switch to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_core_a29c6aa15c0e6420c38b56ea9b1cee4db}\label{class_core_a29c6aa15c0e6420c38b56ea9b1cee4db} 
+\index{Core@{Core}!switchLib@{switchLib}}
+\index{switchLib@{switchLib}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{switchLib()}{switchLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::switch\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}}]{dl,  }\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}}]{lib }\end{DoxyParamCaption})}
+
+
+
+Switches the graphics library being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & Pointer to the loader for graphics libraries. \\
+\hline
+{\em lib} & The name of the library to switch to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_core_a159ba93b4cd7caae4ff68762c9c31f6f}\label{class_core_a159ba93b4cd7caae4ff68762c9c31f6f} 
+\index{Core@{Core}!update\_menu@{update\_menu}}
+\index{update\_menu@{update\_menu}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{update\_menu()}{update\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Core\+::update\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{event,  }\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_graphic}{IGraphic}} $>$ \texorpdfstring{$\ast$}{*}}]{dl,  }\item[{\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}} $>$ \texorpdfstring{$\ast$}{*}}]{dlG }\end{DoxyParamCaption})}
+
+
+
+Updates the menu based on the given event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event triggering the menu update. \\
+\hline
+{\em dl} & Pointer to the loader for graphics libraries. \\
+\hline
+{\em dlG} & Pointer to the loader for game libraries. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_core_af73b0ddac8d91c98e06a941ec980e528}\label{class_core_af73b0ddac8d91c98e06a941ec980e528} 
+\index{Core@{Core}!\_display@{\_display}}
+\index{\_display@{\_display}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{\_display}{\_display}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_graphic}{IGraphic}}\texorpdfstring{$\ast$}{*} Core\+::\+\_\+display\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the graphics interface. \Hypertarget{class_core_a1ef1c833207ab45aa58eb4d1212192aa}\label{class_core_a1ef1c833207ab45aa58eb4d1212192aa} 
+\index{Core@{Core}!\_game@{\_game}}
+\index{\_game@{\_game}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{\_game}{\_game}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_game_lib}{IGame\+Lib}}\texorpdfstring{$\ast$}{*} Core\+::\+\_\+game\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the game logic. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Core/\mbox{\hyperlink{_i_core_8hpp}{ICore.\+hpp}}\item 
+src/\+Core/\mbox{\hyperlink{_i_core_8cpp}{ICore.\+cpp}}\end{DoxyCompactItemize}

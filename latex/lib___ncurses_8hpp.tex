@@ -1,0 +1,85 @@
+\doxysection{src/\+Graphic/\+Ncurses/lib\+\_\+\+Ncurses.hpp File Reference}
+\hypertarget{lib___ncurses_8hpp}{}\label{lib___ncurses_8hpp}\index{src/Graphic/Ncurses/lib\_Ncurses.hpp@{src/Graphic/Ncurses/lib\_Ncurses.hpp}}
+
+
+EPITECH PROJECT, 2024.  
+
+
+{\ttfamily \#include "{}../\+IGraphic.\+hpp"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$menu.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_l_i_b___n_c_u_r_s_e_s}{LIB\+\_\+\+NCURSES}}
+\begin{DoxyCompactList}\small\item\em Implementation of the NCURSES graphics library for handling arcade graphics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}{type\+Menu}} \{ \newline
+\mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180}{main\+Menu}}
+, \mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d}{in\+Game}}
+, \mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca}{pause\+Menu}}
+, \mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47}{settings\+Menu}}
+, \newline
+\mbox{\hyperlink{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964}{end\+Menu}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different types of menus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+EPITECH PROJECT, 2024. 
+
+\begin{DoxyAuthor}{Author}
+COUSTABEAU Maxime / MIGLIANI Benjamin / LAMAN-\/\+DUFLOT Ilhan (\href{mailto:maxime.coustabeau@epitech.eu}{\texttt{ maxime.\+coustabeau@epitech.\+eu}} / \href{mailto:benjamin.migliani@epitech.eu}{\texttt{ benjamin.\+migliani@epitech.\+eu}} / \href{mailto:Ilhan.laman-duflot@epitech.eu}{\texttt{ Ilhan.\+laman-\/duflot@epitech.\+eu}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\doxylink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{0.\+1} 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/03-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7} 
+\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!typeMenu@{typeMenu}}
+\index{typeMenu@{typeMenu}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}
+\doxysubsubsection{\texorpdfstring{typeMenu}{typeMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}{type\+Menu}}}
+
+
+
+Enumeration for different types of menus. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mainMenu@{mainMenu}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!mainMenu@{mainMenu}}}\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180} 
+main\+Menu&Main menu type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inGame@{inGame}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!inGame@{inGame}}}\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d} 
+in\+Game&In-\/game menu type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pauseMenu@{pauseMenu}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!pauseMenu@{pauseMenu}}}\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca} 
+pause\+Menu&Pause menu type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{settingsMenu@{settingsMenu}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!settingsMenu@{settingsMenu}}}\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47} 
+settings\+Menu&Settings menu type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{endMenu@{endMenu}!lib\_Ncurses.hpp@{lib\_Ncurses.hpp}}\index{lib\_Ncurses.hpp@{lib\_Ncurses.hpp}!endMenu@{endMenu}}}\Hypertarget{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964}\label{lib___ncurses_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964} 
+end\+Menu&End game menu type. \\
+\hline
+
+\end{DoxyEnumFields}

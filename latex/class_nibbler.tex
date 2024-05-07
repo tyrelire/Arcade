@@ -1,0 +1,280 @@
+\doxysection{Nibbler Class Reference}
+\hypertarget{class_nibbler}{}\label{class_nibbler}\index{Nibbler@{Nibbler}}
+
+
+Implementation of the \doxylink{class_nibbler}{Nibbler} game logic.  
+
+
+
+
+{\ttfamily \#include $<$Nibbler.\+hpp$>$}
+
+Inheritance diagram for Nibbler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nibbler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_nibbler_ad19e09642ac1516e78109a3c1f43995c}{Nibbler}} ()
+\item 
+\mbox{\hyperlink{class_nibbler_a03b98f06bc1f845f57aa15f034f0467e}{\texorpdfstring{$\sim$}{\string~}\+Nibbler}} ()
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_a286931643cc9d3cb89adab5222cbe5b8}{init}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_ad1df2029c3e773c6bca8c433a0101db4}{stop}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_a9df2d0e5544e83d944adb520d36708d5}{update\+\_\+game}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_nibbler}{Nibbler} game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_afd67834b9b35434f4c5402100eb21d89}{update\+\_\+map}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_nibbler}{Nibbler} game map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_nibbler_a494e76186910dc918d0476e31d541ecc}{move}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{next\+Direction}}, \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{prev\+Direction}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Moves the \doxylink{class_nibbler}{Nibbler} player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_nibbler_a90e3d4ff3bf6cfa19e388dbb5c55ae27}{get\+\_\+score}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the current score of the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ \mbox{\hyperlink{class_nibbler_a72d2ae03d07013b6ed7ea4a65c60518b}{get\+\_\+game\+Map}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the game map of the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_nibbler_af19b3649a154b996618c4980bf4c9080}{get\+\_\+game\+Name}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{bool}} \mbox{\hyperlink{class_nibbler_adb5643f428ee953e0272646c046e69cf}{get\+\_\+game\+Over}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_nibbler}{Nibbler} game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_nibbler_ace26c7b88a4b472e8bcd45cb72093814}{get\+\_\+nb\+Food}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the number of food items in the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_af1ffe94a26f23f72e7f9375d1a694947}{set\+\_\+score}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{score\+Value}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Sets the score of the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_nibbler_a6219a93f6262c0aab2e84aa351b317d6}{set\+\_\+game\+Map}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&\mbox{\hyperlink{class_loader}{entry}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Sets the game map entry of the \doxylink{class_nibbler}{Nibbler} game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{class_nibbler}{Nibbler} game logic. 
+
+This class inherits from \doxylink{class_i_game_lib}{IGame\+Lib} and provides concrete implementations for the \doxylink{class_nibbler}{Nibbler} game logic. It includes methods for initializing the game, stopping it, updating game state, handling player movement, and accessing/modifying game data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_nibbler_ad19e09642ac1516e78109a3c1f43995c}\label{class_nibbler_ad19e09642ac1516e78109a3c1f43995c} 
+\index{Nibbler@{Nibbler}!Nibbler@{Nibbler}}
+\index{Nibbler@{Nibbler}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{Nibbler()}{Nibbler()}}
+{\footnotesize\ttfamily Nibbler\+::\+Nibbler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for initializing the \doxylink{class_nibbler}{Nibbler} game. \Hypertarget{class_nibbler_a03b98f06bc1f845f57aa15f034f0467e}\label{class_nibbler_a03b98f06bc1f845f57aa15f034f0467e} 
+\index{Nibbler@{Nibbler}!````~Nibbler@{\texorpdfstring{$\sim$}{\string~}Nibbler}}
+\index{````~Nibbler@{\texorpdfstring{$\sim$}{\string~}Nibbler}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Nibbler()}{\string~Nibbler()}}
+{\footnotesize\ttfamily Nibbler\+::\texorpdfstring{$\sim$}{\string~}\+Nibbler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for cleaning up \doxylink{class_nibbler}{Nibbler} game resources. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nibbler_a72d2ae03d07013b6ed7ea4a65c60518b}\label{class_nibbler_a72d2ae03d07013b6ed7ea4a65c60518b} 
+\index{Nibbler@{Nibbler}!get\_gameMap@{get\_gameMap}}
+\index{get\_gameMap@{get\_gameMap}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{get\_gameMap()}{get\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ Nibbler\+::get\+\_\+game\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the game map of the \doxylink{class_nibbler}{Nibbler} game. 
+
+\begin{DoxyReturn}{Returns}
+Vector of tuples representing game elements. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a8f2c5f9f6e68397d5c7db3a14b2d326a}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_af19b3649a154b996618c4980bf4c9080}\label{class_nibbler_af19b3649a154b996618c4980bf4c9080} 
+\index{Nibbler@{Nibbler}!get\_gameName@{get\_gameName}}
+\index{get\_gameName@{get\_gameName}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{get\_gameName()}{get\_gameName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} Nibbler\+::get\+\_\+game\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the \doxylink{class_nibbler}{Nibbler} game. 
+
+\begin{DoxyReturn}{Returns}
+The name of the game. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a97e07ac2f42cf91bfef1df378b569aa2}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_adb5643f428ee953e0272646c046e69cf}\label{class_nibbler_adb5643f428ee953e0272646c046e69cf} 
+\index{Nibbler@{Nibbler}!get\_gameOver@{get\_gameOver}}
+\index{get\_gameOver@{get\_gameOver}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{get\_gameOver()}{get\_gameOver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{bool}} Nibbler\+::get\+\_\+game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the \doxylink{class_nibbler}{Nibbler} game is over. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a009fa212618178e6cc6775504e985937}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_ace26c7b88a4b472e8bcd45cb72093814}\label{class_nibbler_ace26c7b88a4b472e8bcd45cb72093814} 
+\index{Nibbler@{Nibbler}!get\_nbFood@{get\_nbFood}}
+\index{get\_nbFood@{get\_nbFood}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{get\_nbFood()}{get\_nbFood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Nibbler\+::get\+\_\+nb\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of food items in the \doxylink{class_nibbler}{Nibbler} game. 
+
+\begin{DoxyReturn}{Returns}
+The number of food items. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_affa2085310b94a1ad3aee49cfef29f1c}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_a90e3d4ff3bf6cfa19e388dbb5c55ae27}\label{class_nibbler_a90e3d4ff3bf6cfa19e388dbb5c55ae27} 
+\index{Nibbler@{Nibbler}!get\_score@{get\_score}}
+\index{get\_score@{get\_score}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{get\_score()}{get\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Nibbler\+::get\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current score of the \doxylink{class_nibbler}{Nibbler} game. 
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a5f35cf7214da9691ede02eeadb10bcb8}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_a286931643cc9d3cb89adab5222cbe5b8}\label{class_nibbler_a286931643cc9d3cb89adab5222cbe5b8} 
+\index{Nibbler@{Nibbler}!init@{init}}
+\index{init@{init}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the \doxylink{class_nibbler}{Nibbler} game. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a1f8e7ddf8f3460c10c4235736ec9f50f}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_a494e76186910dc918d0476e31d541ecc}\label{class_nibbler_a494e76186910dc918d0476e31d541ecc} 
+\index{Nibbler@{Nibbler}!move@{move}}
+\index{move@{move}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Nibbler\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{next\+Direction,  }\item[{\mbox{\hyperlink{class_loader}{int}}}]{prev\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Moves the \doxylink{class_nibbler}{Nibbler} player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Direction} & The next direction the player intends to move. \\
+\hline
+{\em prev\+Direction} & The previous direction the player was moving in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the move operation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a5555cb426513f5c1aede42561ea841e2}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_a6219a93f6262c0aab2e84aa351b317d6}\label{class_nibbler_a6219a93f6262c0aab2e84aa351b317d6} 
+\index{Nibbler@{Nibbler}!set\_gameMap@{set\_gameMap}}
+\index{set\_gameMap@{set\_gameMap}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{set\_gameMap()}{set\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::set\+\_\+game\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the game map entry of the \doxylink{class_nibbler}{Nibbler} game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The tuple representing a game element to set in the game map. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a1398ebafdd163a4f942efc43cb0bef4f}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_af1ffe94a26f23f72e7f9375d1a694947}\label{class_nibbler_af1ffe94a26f23f72e7f9375d1a694947} 
+\index{Nibbler@{Nibbler}!set\_score@{set\_score}}
+\index{set\_score@{set\_score}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{set\_score()}{set\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::set\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{score\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the score of the \doxylink{class_nibbler}{Nibbler} game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Value} & The value to set as the score. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a2563521e2483f21e1c9b1a1529920416}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_ad1df2029c3e773c6bca8c433a0101db4}\label{class_nibbler_ad1df2029c3e773c6bca8c433a0101db4} 
+\index{Nibbler@{Nibbler}!stop@{stop}}
+\index{stop@{stop}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops the \doxylink{class_nibbler}{Nibbler} game. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aceaf4d20ad26ba2a5de324ecf7b167a0}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_a9df2d0e5544e83d944adb520d36708d5}\label{class_nibbler_a9df2d0e5544e83d944adb520d36708d5} 
+\index{Nibbler@{Nibbler}!update\_game@{update\_game}}
+\index{update\_game@{update\_game}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{update\_game()}{update\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::update\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_nibbler}{Nibbler} game state. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aaaabc92f0f1c29b33fe590c23a5a7d89}{IGame\+Lib}}.
+
+\Hypertarget{class_nibbler_afd67834b9b35434f4c5402100eb21d89}\label{class_nibbler_afd67834b9b35434f4c5402100eb21d89} 
+\index{Nibbler@{Nibbler}!update\_map@{update\_map}}
+\index{update\_map@{update\_map}!Nibbler@{Nibbler}}
+\doxysubsubsection{\texorpdfstring{update\_map()}{update\_map()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Nibbler\+::update\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_nibbler}{Nibbler} game map. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aef14660ca3d93a570f39926ac0f0cf3f}{IGame\+Lib}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\+Nibbler/\mbox{\hyperlink{_nibbler_8hpp}{Nibbler.\+hpp}}\item 
+src/\+Game/\+Nibbler/\mbox{\hyperlink{_nibbler_8cpp}{Nibbler.\+cpp}}\end{DoxyCompactItemize}

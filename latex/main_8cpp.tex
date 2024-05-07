@@ -1,0 +1,78 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+EPITECH PROJECT, 2024 Main entry point for the Arcade application. Initializes Arcade, and manages user interaction.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include "{}./\+Core/\+ICore.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{main_8cpp_a0d20b69b0ad703df78459e1033d5c1d4}{print\+Help}} ()
+\begin{DoxyCompactList}\small\item\em Displays Arcade\textquotesingle{}s help message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{main_8cpp_a0c99d968a34e803d378692bde2e3f18f}{main}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{ac}}, \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{av}})
+\begin{DoxyCompactList}\small\item\em Main function for Arcade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+EPITECH PROJECT, 2024 Main entry point for the Arcade application. Initializes Arcade, and manages user interaction. 
+
+\begin{DoxyAuthor}{Author}
+COUSTABEAU Maxime (\href{mailto:maxime.coustabeau@epitech.eu}{\texttt{ maxime.\+coustabeau@epitech.\+eu}}) / MIGLIANI Benjamin (\href{mailto:benjamin.migliani@epitech.eu}{\texttt{ benjamin.\+migliani@epitech.\+eu}}) / LAMAN-\/\+DUFLOT Ilhan (\href{mailto:Ilhan.laman-duflot@epitech.eu}{\texttt{ Ilhan.\+laman-\/duflot@epitech.\+eu}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\doxylink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{0.\+1} 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/03-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a0c99d968a34e803d378692bde2e3f18f}\label{main_8cpp_a0c99d968a34e803d378692bde2e3f18f} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{ac,  }\item[{\mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{av }\end{DoxyParamCaption})}
+
+
+
+Main function for Arcade. 
+
+This function handles command line arguments, initializes Arcade, and manages user interaction. The program supports a help message ("{}-\/h"{} or "{}-\/\+H"{} or -\/help"{} or "{}-\/Help"{}) and a debug mode ("{}-\/Debug or -\/debug or -\/D or -\/d"{}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Number of command line arguments. \\
+\hline
+{\em av} & Array of pointers to strings representing command line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Exit status (0 for success, 84 for errors). 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a0d20b69b0ad703df78459e1033d5c1d4}\label{main_8cpp_a0d20b69b0ad703df78459e1033d5c1d4} 
+\index{main.cpp@{main.cpp}!printHelp@{printHelp}}
+\index{printHelp@{printHelp}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printHelp()}{printHelp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} print\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays Arcade\textquotesingle{}s help message. 
+
+This function prints usage information for the program. 

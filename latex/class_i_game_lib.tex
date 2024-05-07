@@ -1,0 +1,260 @@
+\doxysection{IGame\+Lib Class Reference}
+\hypertarget{class_i_game_lib}{}\label{class_i_game_lib}\index{IGameLib@{IGameLib}}
+
+
+Interface for Game Library.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+Lib.\+hpp$>$}
+
+Inheritance diagram for IGame\+Lib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_game_lib}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_a1f8e7ddf8f3460c10c4235736ec9f50f}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Initializes the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_aceaf4d20ad26ba2a5de324ecf7b167a0}{stop}} ()=0
+\begin{DoxyCompactList}\small\item\em Stops the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_aaaabc92f0f1c29b33fe590c23a5a7d89}{update\+\_\+game}} ()=0
+\begin{DoxyCompactList}\small\item\em Updates the game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_aef14660ca3d93a570f39926ac0f0cf3f}{update\+\_\+map}} ()=0
+\begin{DoxyCompactList}\small\item\em Updates the game map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_i_game_lib_a5555cb426513f5c1aede42561ea841e2}{move}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{next\+Direction}}, \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{prev\+Direction}})=0
+\begin{DoxyCompactList}\small\item\em Moves the player in the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_i_game_lib_a5f35cf7214da9691ede02eeadb10bcb8}{get\+\_\+score}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the current score of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ \mbox{\hyperlink{class_i_game_lib_a8f2c5f9f6e68397d5c7db3a14b2d326a}{get\+\_\+game\+Map}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the game map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_i_game_lib_a97e07ac2f42cf91bfef1df378b569aa2}{get\+\_\+game\+Name}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the name of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{bool}} \mbox{\hyperlink{class_i_game_lib_a009fa212618178e6cc6775504e985937}{get\+\_\+game\+Over}} ()=0
+\begin{DoxyCompactList}\small\item\em Checks if the game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_i_game_lib_affa2085310b94a1ad3aee49cfef29f1c}{get\+\_\+nb\+Food}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the number of food items in the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_a2563521e2483f21e1c9b1a1529920416}{set\+\_\+score}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{score\+Value}})=0
+\begin{DoxyCompactList}\small\item\em Sets the score of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_i_game_lib_a1398ebafdd163a4f942efc43cb0bef4f}{set\+\_\+game\+Map}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&\mbox{\hyperlink{class_loader}{entry}})=0
+\begin{DoxyCompactList}\small\item\em Sets the game map entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for Game Library. 
+
+This class defines a set of virtual methods for handling game logic and data in an arcade system. It provides methods for initializing the game, stopping it, updating game state, and handling player movement. Additionally, it includes getters and setters for accessing and modifying game data such as score, game map, game name, game over status, and number of food items. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_game_lib_a8f2c5f9f6e68397d5c7db3a14b2d326a}\label{class_i_game_lib_a8f2c5f9f6e68397d5c7db3a14b2d326a} 
+\index{IGameLib@{IGameLib}!get\_gameMap@{get\_gameMap}}
+\index{get\_gameMap@{get\_gameMap}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{get\_gameMap()}{get\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ IGame\+Lib\+::get\+\_\+game\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the game map. 
+
+\begin{DoxyReturn}{Returns}
+Vector of tuples representing game elements. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a72d2ae03d07013b6ed7ea4a65c60518b}{Nibbler}}, and \mbox{\hyperlink{class_snake_ab1220e5678ee15d4bf11b8637fb5371a}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a97e07ac2f42cf91bfef1df378b569aa2}\label{class_i_game_lib_a97e07ac2f42cf91bfef1df378b569aa2} 
+\index{IGameLib@{IGameLib}!get\_gameName@{get\_gameName}}
+\index{get\_gameName@{get\_gameName}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{get\_gameName()}{get\_gameName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} IGame\+Lib\+::get\+\_\+game\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the name of the game. 
+
+\begin{DoxyReturn}{Returns}
+The name of the game. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_af19b3649a154b996618c4980bf4c9080}{Nibbler}}, and \mbox{\hyperlink{class_snake_ad46de4997f288f4ae333f46b610ae817}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a009fa212618178e6cc6775504e985937}\label{class_i_game_lib_a009fa212618178e6cc6775504e985937} 
+\index{IGameLib@{IGameLib}!get\_gameOver@{get\_gameOver}}
+\index{get\_gameOver@{get\_gameOver}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{get\_gameOver()}{get\_gameOver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{bool}} IGame\+Lib\+::get\+\_\+game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the game is over. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_adb5643f428ee953e0272646c046e69cf}{Nibbler}}, and \mbox{\hyperlink{class_snake_a47387c03fffb5412665d6f2f3367f1d0}{Snake}}.
+
+\Hypertarget{class_i_game_lib_affa2085310b94a1ad3aee49cfef29f1c}\label{class_i_game_lib_affa2085310b94a1ad3aee49cfef29f1c} 
+\index{IGameLib@{IGameLib}!get\_nbFood@{get\_nbFood}}
+\index{get\_nbFood@{get\_nbFood}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{get\_nbFood()}{get\_nbFood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} IGame\+Lib\+::get\+\_\+nb\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the number of food items in the game. 
+
+\begin{DoxyReturn}{Returns}
+The number of food items. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_ace26c7b88a4b472e8bcd45cb72093814}{Nibbler}}, and \mbox{\hyperlink{class_snake_a51d7e3bc5701e9676f57041af4053c90}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a5f35cf7214da9691ede02eeadb10bcb8}\label{class_i_game_lib_a5f35cf7214da9691ede02eeadb10bcb8} 
+\index{IGameLib@{IGameLib}!get\_score@{get\_score}}
+\index{get\_score@{get\_score}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{get\_score()}{get\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} IGame\+Lib\+::get\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the current score of the game. 
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a90e3d4ff3bf6cfa19e388dbb5c55ae27}{Nibbler}}, and \mbox{\hyperlink{class_snake_aef50b7acc26591ba8d7c001932537179}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a1f8e7ddf8f3460c10c4235736ec9f50f}\label{class_i_game_lib_a1f8e7ddf8f3460c10c4235736ec9f50f} 
+\index{IGameLib@{IGameLib}!init@{init}}
+\index{init@{init}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initializes the game. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a286931643cc9d3cb89adab5222cbe5b8}{Nibbler}}, and \mbox{\hyperlink{class_snake_af62b5fdc7ecc9fe5f27b122b7b197d14}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a5555cb426513f5c1aede42561ea841e2}\label{class_i_game_lib_a5555cb426513f5c1aede42561ea841e2} 
+\index{IGameLib@{IGameLib}!move@{move}}
+\index{move@{move}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{int}} IGame\+Lib\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{next\+Direction,  }\item[{\mbox{\hyperlink{class_loader}{int}}}]{prev\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Moves the player in the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Direction} & The next direction the player intends to move. \\
+\hline
+{\em prev\+Direction} & The previous direction the player was moving in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the move operation. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a494e76186910dc918d0476e31d541ecc}{Nibbler}}, and \mbox{\hyperlink{class_snake_a63fabad5aab8c8ad05e1313a6330cde8}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a1398ebafdd163a4f942efc43cb0bef4f}\label{class_i_game_lib_a1398ebafdd163a4f942efc43cb0bef4f} 
+\index{IGameLib@{IGameLib}!set\_gameMap@{set\_gameMap}}
+\index{set\_gameMap@{set\_gameMap}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{set\_gameMap()}{set\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::set\+\_\+game\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the game map entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The tuple representing a game element to set in the game map. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a6219a93f6262c0aab2e84aa351b317d6}{Nibbler}}, and \mbox{\hyperlink{class_snake_a7ffc5da83c8f31594f9e71ed8f40306c}{Snake}}.
+
+\Hypertarget{class_i_game_lib_a2563521e2483f21e1c9b1a1529920416}\label{class_i_game_lib_a2563521e2483f21e1c9b1a1529920416} 
+\index{IGameLib@{IGameLib}!set\_score@{set\_score}}
+\index{set\_score@{set\_score}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{set\_score()}{set\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::set\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{score\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the score of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Value} & The value to set as the score. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_af1ffe94a26f23f72e7f9375d1a694947}{Nibbler}}, and \mbox{\hyperlink{class_snake_acf43f69db9d0f80a2f26874dfb41d1cb}{Snake}}.
+
+\Hypertarget{class_i_game_lib_aceaf4d20ad26ba2a5de324ecf7b167a0}\label{class_i_game_lib_aceaf4d20ad26ba2a5de324ecf7b167a0} 
+\index{IGameLib@{IGameLib}!stop@{stop}}
+\index{stop@{stop}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stops the game. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_ad1df2029c3e773c6bca8c433a0101db4}{Nibbler}}, and \mbox{\hyperlink{class_snake_a35a7a4894f467c275be6310ecdac1cb4}{Snake}}.
+
+\Hypertarget{class_i_game_lib_aaaabc92f0f1c29b33fe590c23a5a7d89}\label{class_i_game_lib_aaaabc92f0f1c29b33fe590c23a5a7d89} 
+\index{IGameLib@{IGameLib}!update\_game@{update\_game}}
+\index{update\_game@{update\_game}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{update\_game()}{update\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::update\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the game state. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_a9df2d0e5544e83d944adb520d36708d5}{Nibbler}}, and \mbox{\hyperlink{class_snake_ac104c61659905143ea79cb6e44fcdbc0}{Snake}}.
+
+\Hypertarget{class_i_game_lib_aef14660ca3d93a570f39926ac0f0cf3f}\label{class_i_game_lib_aef14660ca3d93a570f39926ac0f0cf3f} 
+\index{IGameLib@{IGameLib}!update\_map@{update\_map}}
+\index{update\_map@{update\_map}!IGameLib@{IGameLib}}
+\doxysubsubsection{\texorpdfstring{update\_map()}{update\_map()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{virtual}} \mbox{\hyperlink{class_loader}{void}} IGame\+Lib\+::update\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the game map. 
+
+
+
+Implemented in \mbox{\hyperlink{class_nibbler_afd67834b9b35434f4c5402100eb21d89}{Nibbler}}, and \mbox{\hyperlink{class_snake_a325903d673a89f45a97b99fe20114705}{Snake}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\mbox{\hyperlink{_i_game_lib_8hpp}{IGame\+Lib.\+hpp}}\end{DoxyCompactItemize}

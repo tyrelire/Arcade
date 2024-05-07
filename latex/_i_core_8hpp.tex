@@ -1,0 +1,121 @@
+\doxysection{src/\+Core/\+ICore.hpp File Reference}
+\hypertarget{_i_core_8hpp}{}\label{_i_core_8hpp}\index{src/Core/ICore.hpp@{src/Core/ICore.hpp}}
+
+
+EPITECH PROJECT, 2024 Implementation of the Exception class for handling exceptions in the arcade application.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}../\+Game/\+IGame\+Lib.\+hpp"{}}\newline
+{\ttfamily \#include "{}../\+Graphic/\+IGraphic.\+hpp"{}}\newline
+{\ttfamily \#include "{}Loader.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_core}{Core}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_core}{Core} class responsible for managing the main game loop and coordinating interactions between graphics and game logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}{type\+Menu}} \{ \newline
+\mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180}{main\+Menu}}
+, \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d}{in\+Game}}
+, \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca}{pause\+Menu}}
+, \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47}{settings\+Menu}}
+, \newline
+\mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964}{end\+Menu}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different types of menus. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098}{direction}} \{ \newline
+\mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a}{top}}
+, \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296}{down}}
+, \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0}{left}}
+, \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a}{right}}
+, \newline
+\mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0}{none}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for different directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+EPITECH PROJECT, 2024 Implementation of the Exception class for handling exceptions in the arcade application. 
+
+\begin{DoxyAuthor}{Author}
+COUSTABEAU Maxime (\href{mailto:maxime.coustabeau@epitech.eu}{\texttt{ maxime.\+coustabeau@epitech.\+eu}}) / MIGLIANI Benjamin (\href{mailto:benjamin.migliani@epitech.eu}{\texttt{ benjamin.\+migliani@epitech.\+eu}}) / LAMAN-\/\+DUFLOT Ilhan (\href{mailto:Ilhan.laman-duflot@epitech.eu}{\texttt{ Ilhan.\+laman-\/duflot@epitech.\+eu}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\doxylink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{0.\+1} 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/03-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098} 
+\index{ICore.hpp@{ICore.hpp}!direction@{direction}}
+\index{direction@{direction}!ICore.hpp@{ICore.hpp}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098}{direction}}}
+
+
+
+Enumeration for different directions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{top@{top}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!top@{top}}}\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a} 
+top&Up direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{down@{down}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!down@{down}}}\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296} 
+down&Down direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{left@{left}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!left@{left}}}\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0} 
+left&Left direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{right@{right}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!right@{right}}}\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a} 
+right&Right direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!none@{none}}}\Hypertarget{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0}\label{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0} 
+none&No direction. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7} 
+\index{ICore.hpp@{ICore.hpp}!typeMenu@{typeMenu}}
+\index{typeMenu@{typeMenu}!ICore.hpp@{ICore.hpp}}
+\doxysubsubsection{\texorpdfstring{typeMenu}{typeMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{enum}} \mbox{\hyperlink{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7}{type\+Menu}}}
+
+
+
+Enumeration for different types of menus. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mainMenu@{mainMenu}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!mainMenu@{mainMenu}}}\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a3766dca84536a644e2f680f520e63180} 
+main\+Menu&Main menu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{inGame@{inGame}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!inGame@{inGame}}}\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7acfeaa7ec59c50a1c79601eccb8de6b6d} 
+in\+Game&In-\/game menu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pauseMenu@{pauseMenu}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!pauseMenu@{pauseMenu}}}\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7ac105bd12e322afd3854588b92caa35ca} 
+pause\+Menu&Pause menu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{settingsMenu@{settingsMenu}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!settingsMenu@{settingsMenu}}}\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a2448ace0d6556a8aa388f56abbd91c47} 
+settings\+Menu&Settings menu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{endMenu@{endMenu}!ICore.hpp@{ICore.hpp}}\index{ICore.hpp@{ICore.hpp}!endMenu@{endMenu}}}\Hypertarget{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964}\label{_i_core_8hpp_a5a0d16c5a30d8946e13dcf69230bdee7a291767c677ca510b15acce3d25956964} 
+end\+Menu&End menu. \\
+\hline
+
+\end{DoxyEnumFields}

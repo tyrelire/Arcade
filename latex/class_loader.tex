@@ -1,0 +1,199 @@
+\doxysection{Loader\texorpdfstring{$<$}{<} Class\+Container \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_loader}{}\label{class_loader}\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+
+
+Generic class for dynamically loading shared libraries and instantiating objects from them.  
+
+
+
+
+{\ttfamily \#include $<$Loader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_loader_acb3f79d04feaa67c1653704043f5d45e}\label{class_loader_acb3f79d04feaa67c1653704043f5d45e} 
+{\bfseries Loader} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_ae511c54df3ef261c87947b7e43353a89}{Loader}} (\mbox{\hyperlink{class_loader}{const}} std\+::string \&\mbox{\hyperlink{class_loader}{fn}})
+\begin{DoxyCompactList}\small\item\em Constructor with a specified library file name. \end{DoxyCompactList}\item 
+\Hypertarget{class_loader_a8e24e5b8c7afa8fc2849dfe7d6cc20ee}\label{class_loader_a8e24e5b8c7afa8fc2849dfe7d6cc20ee} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Destructor for cleaning up resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{Class\+Container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_loader_afda3c3422a4dcb129847e92d50fd63fb}{curr\+Inst}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \&\mbox{\hyperlink{class_loader}{param}})
+\begin{DoxyCompactList}\small\item\em Creates an instance of the specified class from the loaded library. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} $>$ \mbox{\hyperlink{class_loader_af6621e31e06ac15d073f47f13cdd377b}{path\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Obtains paths to available libraries in a directory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_loader_a7af00249b688d3c50eb98d54fdb6bcfe}{swap\+Lib}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_loader}{fn}})
+\begin{DoxyCompactList}\small\item\em Swaps the currently loaded library with another one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader_af29045a01e1d57e17132cfc21eb7fdd7}{curr\+Lib}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{lib}})
+\begin{DoxyCompactList}\small\item\em Retrieves the index of a library in the library path vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\+\_\+loaded\+Lib}}
+\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} $>$ \mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\+\_\+path}}
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader_ab3c9d1ed34704659e5c5facfa60a3472}{\+\_\+lib}}
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader_a2a32345d6a80f19b4c83c494aa6fedff}{load\+SDL2}}
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader_ab640c590b3f8bbb4dcd852cd19480167}{load\+NCURSES}}
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader_af51846427a6a7ac03b6731b74b7579c9}{load\+SFML}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Class\+Container$>$\newline
+class Loader$<$ Class\+Container $>$}
+Generic class for dynamically loading shared libraries and instantiating objects from them. 
+
+This class provides functionality for loading shared libraries dynamically and creating instances of objects from them. It supports loading libraries at runtime, swapping between loaded libraries, and obtaining paths to available libraries.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Class\+Container} & The class type to be instantiated from the loaded library. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_loader_ae511c54df3ef261c87947b7e43353a89}\label{class_loader_ae511c54df3ef261c87947b7e43353a89} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!Loader@{Loader}}
+\index{Loader@{Loader}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{Loader()}{Loader()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\mbox{\hyperlink{class_loader}{\+::\+Loader}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} std\+::string \&}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with a specified library file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The file name of the library to load. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_loader_afda3c3422a4dcb129847e92d50fd63fb}\label{class_loader_afda3c3422a4dcb129847e92d50fd63fb} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!currInst@{currInst}}
+\index{currInst@{currInst}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{currInst()}{currInst()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{Class\+Container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::curr\+Inst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an instance of the specified class from the loaded library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The name of the class to instantiate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the instantiated object. 
+\end{DoxyReturn}
+\Hypertarget{class_loader_af29045a01e1d57e17132cfc21eb7fdd7}\label{class_loader_af29045a01e1d57e17132cfc21eb7fdd7} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!currLib@{currLib}}
+\index{currLib@{currLib}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{currLib()}{currLib()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::curr\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the index of a library in the library path vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & The file name of the library. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the library in the path vector. 
+\end{DoxyReturn}
+\Hypertarget{class_loader_af6621e31e06ac15d073f47f13cdd377b}\label{class_loader_af6621e31e06ac15d073f47f13cdd377b} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!pathLib@{pathLib}}
+\index{pathLib@{pathLib}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{pathLib()}{pathLib()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} $>$ \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::path\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains paths to available libraries in a directory. 
+
+\begin{DoxyReturn}{Returns}
+A vector of strings representing library paths. 
+\end{DoxyReturn}
+\Hypertarget{class_loader_a7af00249b688d3c50eb98d54fdb6bcfe}\label{class_loader_a7af00249b688d3c50eb98d54fdb6bcfe} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!swapLib@{swapLib}}
+\index{swapLib@{swapLib}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{swapLib()}{swapLib()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::swap\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader}{char}} \texorpdfstring{$\ast$}{*}}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swaps the currently loaded library with another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & The file name of the library to load. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_loader_ab3c9d1ed34704659e5c5facfa60a3472}\label{class_loader_ab3c9d1ed34704659e5c5facfa60a3472} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!\_lib@{\_lib}}
+\index{\_lib@{\_lib}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{\_lib}{\_lib}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::\+\_\+lib}
+
+Index of the current library in the path vector. \Hypertarget{class_loader_acc39a7024e3f554d5ad98385fc3587c3}\label{class_loader_acc39a7024e3f554d5ad98385fc3587c3} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!\_loadedLib@{\_loadedLib}}
+\index{\_loadedLib@{\_loadedLib}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{\_loadedLib}{\_loadedLib}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{void}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::\+\_\+loaded\+Lib}
+
+Pointer to the loaded library. \Hypertarget{class_loader_ab2e1ea2874c23c2799ba365026834bbf}\label{class_loader_ab2e1ea2874c23c2799ba365026834bbf} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!\_path@{\_path}}
+\index{\_path@{\_path}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{\_path}{\_path}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}$>$ \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::\+\_\+path}
+
+Vector containing paths to available libraries. \Hypertarget{class_loader_ab640c590b3f8bbb4dcd852cd19480167}\label{class_loader_ab640c590b3f8bbb4dcd852cd19480167} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!loadNCURSES@{loadNCURSES}}
+\index{loadNCURSES@{loadNCURSES}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{loadNCURSES}{loadNCURSES}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::load\+NCURSES}
+
+Indicator for NCURSES library loading status. \Hypertarget{class_loader_a2a32345d6a80f19b4c83c494aa6fedff}\label{class_loader_a2a32345d6a80f19b4c83c494aa6fedff} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!loadSDL2@{loadSDL2}}
+\index{loadSDL2@{loadSDL2}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{loadSDL2}{loadSDL2}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::load\+SDL2}
+
+Indicator for SDL2 library loading status. \Hypertarget{class_loader_af51846427a6a7ac03b6731b74b7579c9}\label{class_loader_af51846427a6a7ac03b6731b74b7579c9} 
+\index{Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}!loadSFML@{loadSFML}}
+\index{loadSFML@{loadSFML}!Loader$<$ ClassContainer $>$@{Loader$<$ ClassContainer $>$}}
+\doxysubsubsection{\texorpdfstring{loadSFML}{loadSFML}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_loader}{typename}} \mbox{\hyperlink{class_loader}{Class\+Container}} $>$ \\
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{Loader}}$<$ \mbox{\hyperlink{class_loader}{Class\+Container}} $>$\+::load\+SFML}
+
+Indicator for SFML library loading status. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Core/\mbox{\hyperlink{_loader_8hpp}{Loader.\+hpp}}\end{DoxyCompactItemize}

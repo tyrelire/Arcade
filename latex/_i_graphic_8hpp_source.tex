@@ -1,0 +1,83 @@
+\doxysection{IGraphic.\+hpp}
+\hypertarget{_i_graphic_8hpp_source}{}\label{_i_graphic_8hpp_source}\index{src/Graphic/IGraphic.hpp@{src/Graphic/IGraphic.hpp}}
+\mbox{\hyperlink{_i_graphic_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ IGRAPHIC\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ IGRAPHIC\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_graphic}{IGraphic}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_graphic}{\string~IGraphic}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Init}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a4ffea6a61d7e2d862f01f45ecfaf07cf}{init}}()\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Menu}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_a83cb988e5dfc45237fdb9c44c6a9e160}{main\_menu}}()\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_a64d6702274e232a898cb69b2ccc028f1}{end\_menu}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{playerName}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{score}})\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_a04e504c9f56896ba97580c244b8de4b1}{pause\_menu}}()\ =\ 0;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_a262b12c0e6eb9c0079e6f3b09aae71b4}{settings\_menu}}()\ =\ 0;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_af9bda9f05466bef41d8d7a537b644227}{game\_menu}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector}}<\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::tuple<char,\ std::string,\ int,\ int>}}>\ \_gameMap,\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{nameGame}})\ =\ 0;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_ad9e89ed6ed776bcbc46711264795ce18}{draw\_game}}()\ =\ 0;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a247c864611c4263e89bf64b4a4f8bbce}{draw\_score}}()\ =\ 0;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_aff37495c63afd4b111f4c497c21b74d0}{draw\_playerName}}()\ =\ 0;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_aba297c6250318cd03fdeafa661ebf920}{draw\_allSprite}}()\ =\ 0;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a64b39d001f23a42f2f3179d19e4910fa}{draw\_map}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector}}<\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::tuple<char,\ std::string,\ int,\ int>}}>\ \_gameMap,\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{nameGame}})\ =\ 0;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Event}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a8718a45b55b58d0af48be3b5cb0ecfc0}{close}}()\ =\ 0;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a6e666a39fe92b331158b32da5f038b60}{stop}}()\ =\ 0;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a6e6f477667aca13b82edc614a02f11ff}{pause}}()\ =\ 0;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_ad87053479acde964c825e016fde2409d}{clear}}()\ =\ 0;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_ad6984e987ed7995e0361bdc25736fcec}{update}}()\ =\ 0;}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sound}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a33a6bcaac835cc2f7327ebec74198fd0}{sound}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{pathMusic}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{volume}})\ =\ 0;}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a97f81013601c788f9f74272671d3baf7}{set\_volume}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{value}})\ =\ 0;}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setter}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a884da0f536c44fd6d505989a23f1f602}{set\_playerName}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{name}})\ =\ 0;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_a3fb14dfc43332c2e0213cfffa0824dff}{set\_selectedItem}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{index}})\ =\ 0;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_graphic_af61c9813742b5c01c684467d56f8f4cb}{set\_nameLib}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{lib}})\ =\ 0;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getter}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_ab6d8efcd6246dc766d26bc38c2f30dea}{get\_playerName}}()\ =\ 0;}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_graphic_ae10d8f583975a23d4dc5837915b705f6}{get\_selectedItem}}()\ =\ 0;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_i_graphic_a0196981d96d06c069b5854ddbef823f9}{get\_nameLib}}()\ =\ 0;}
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !IGRAPHIC\_HPP}}
+
+\end{DoxyCode}

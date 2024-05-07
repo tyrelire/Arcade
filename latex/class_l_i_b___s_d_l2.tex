@@ -1,0 +1,341 @@
+\doxysection{LIB\+\_\+\+SDL2 Class Reference}
+\hypertarget{class_l_i_b___s_d_l2}{}\label{class_l_i_b___s_d_l2}\index{LIB\_SDL2@{LIB\_SDL2}}
+
+
+Implementation of the SDL2 graphics library for handling arcade graphics.  
+
+
+
+
+{\ttfamily \#include $<$lib\+\_\+\+Sdl2.\+hpp$>$}
+
+Inheritance diagram for LIB\+\_\+\+SDL2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_l_i_b___s_d_l2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_i_b___s_d_l2_a1d7706255e236b1daa9fcc9d17737641}{LIB\+\_\+\+SDL2}} ()
+\item 
+\mbox{\hyperlink{class_l_i_b___s_d_l2_aa3d0d578af582517d5af667505ac99ff}{\texorpdfstring{$\sim$}{\string~}\+LIB\+\_\+\+SDL2}} ()
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a968d5af34bd719ff1d3f8364984c7441}{init}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ad3cba03c1c9ce572b9b88a71ce024cdb}{main\+\_\+menu}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_afb26fef1312e18820dbad9dd9846c663}{end\+\_\+menu}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{player\+Name}}, \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{score}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a6b85e907d690669e6b7cd4139b55e1f4}{pause\+\_\+menu}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a558db1b9f81c7fbf1f35a2875d4b8713}{settings\+\_\+menu}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a9fb58cfabbff03663afa34bdf53bddcb}{game\+\_\+menu}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ \+\_\+game\+Map, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{name\+Game}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a6982b3a860904054625510fde3ee0ad5}{draw\+\_\+game}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a3058dacc5a9127e9c7f70aec41126cdd}{draw\+\_\+score}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_abd50267268183e42d4a2b5633f27fbb6}{draw\+\_\+player\+Name}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a3a0cb4259a67ed7c20676d981130fbbf}{draw\+\_\+all\+Sprite}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ae7a5315f07293fa1e0d076e4eaa4d7f9}{draw\+\_\+map}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ \+\_\+game\+Map, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{name\+Game}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ae0ff58af8aaf3ad6c8c2b4bdb8d852bd}{stop}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_aa340ba7211f146695e1388c6fc6890d7}{pause}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a51e7cc5d977a098bc0cc637c6ae2f632}{clear}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_abfb5a6415906da857befc95317b84741}{close}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a43506d1b2b805f9f2efa3bfc9b92ba27}{update}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ab9494b9e98a37777104a60d4338cf367}{sound}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{path\+Music}}, \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{volume}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a25a61ef9ffd86b1beb6569343a0e6630}{set\+\_\+volume}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{value}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a8156fdb26bb902a1824c290084245f5b}{set\+\_\+player\+Name}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{name}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ac0a81d3b140fddda9e0a8f6f1ee36077}{set\+\_\+selected\+Item}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{index}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a5e0b00db3bf63c0ea3fa8b32f6f356ab}{set\+\_\+name\+Lib}} (\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_loader}{lib}}) \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a5303e74e340efb876c5d5139ffa0451c}{get\+\_\+player\+Name}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_l_i_b___s_d_l2_a71d55d8d5aec7468e319bac663dd654c}{get\+\_\+selected\+Item}} () \mbox{\hyperlink{class_loader}{override}}
+\item 
+\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_l_i_b___s_d_l2_ac95df59209f01a7f4857f6172ebdf8f5}{get\+\_\+name\+Lib}} () \mbox{\hyperlink{class_loader}{override}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the SDL2 graphics library for handling arcade graphics. 
+
+This class inherits from \doxylink{class_i_graphic}{IGraphic} and provides concrete implementations for SDL2-\/based graphics handling. It includes methods for initializing graphics, drawing menus, managing events, updating graphics, handling sounds, and providing getters/setters for various properties. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_l_i_b___s_d_l2_a1d7706255e236b1daa9fcc9d17737641}\label{class_l_i_b___s_d_l2_a1d7706255e236b1daa9fcc9d17737641} 
+\index{LIB\_SDL2@{LIB\_SDL2}!LIB\_SDL2@{LIB\_SDL2}}
+\index{LIB\_SDL2@{LIB\_SDL2}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{LIB\_SDL2()}{LIB\_SDL2()}}
+{\footnotesize\ttfamily LIB\+\_\+\+SDL2\+::\+LIB\+\_\+\+SDL2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for initializing SDL2 library. \Hypertarget{class_l_i_b___s_d_l2_aa3d0d578af582517d5af667505ac99ff}\label{class_l_i_b___s_d_l2_aa3d0d578af582517d5af667505ac99ff} 
+\index{LIB\_SDL2@{LIB\_SDL2}!````~LIB\_SDL2@{\texorpdfstring{$\sim$}{\string~}LIB\_SDL2}}
+\index{````~LIB\_SDL2@{\texorpdfstring{$\sim$}{\string~}LIB\_SDL2}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LIB\_SDL2()}{\string~LIB\_SDL2()}}
+{\footnotesize\ttfamily LIB\+\_\+\+SDL2\+::\texorpdfstring{$\sim$}{\string~}\+LIB\+\_\+\+SDL2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for cleaning up SDL2 resources. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_l_i_b___s_d_l2_a51e7cc5d977a098bc0cc637c6ae2f632}\label{class_l_i_b___s_d_l2_a51e7cc5d977a098bc0cc637c6ae2f632} 
+\index{LIB\_SDL2@{LIB\_SDL2}!clear@{clear}}
+\index{clear@{clear}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Clears the graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_ad87053479acde964c825e016fde2409d}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_abfb5a6415906da857befc95317b84741}\label{class_l_i_b___s_d_l2_abfb5a6415906da857befc95317b84741} 
+\index{LIB\_SDL2@{LIB\_SDL2}!close@{close}}
+\index{close@{close}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Closes the graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a8718a45b55b58d0af48be3b5cb0ecfc0}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a3a0cb4259a67ed7c20676d981130fbbf}\label{class_l_i_b___s_d_l2_a3a0cb4259a67ed7c20676d981130fbbf} 
+\index{LIB\_SDL2@{LIB\_SDL2}!draw\_allSprite@{draw\_allSprite}}
+\index{draw\_allSprite@{draw\_allSprite}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{draw\_allSprite()}{draw\_allSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::draw\+\_\+all\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws all sprites. 
+
+Implements \mbox{\hyperlink{class_i_graphic_aba297c6250318cd03fdeafa661ebf920}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a6982b3a860904054625510fde3ee0ad5}\label{class_l_i_b___s_d_l2_a6982b3a860904054625510fde3ee0ad5} 
+\index{LIB\_SDL2@{LIB\_SDL2}!draw\_game@{draw\_game}}
+\index{draw\_game@{draw\_game}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{draw\_game()}{draw\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::draw\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the game. 
+
+Implements \mbox{\hyperlink{class_i_graphic_ad9e89ed6ed776bcbc46711264795ce18}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ae7a5315f07293fa1e0d076e4eaa4d7f9}\label{class_l_i_b___s_d_l2_ae7a5315f07293fa1e0d076e4eaa4d7f9} 
+\index{LIB\_SDL2@{LIB\_SDL2}!draw\_map@{draw\_map}}
+\index{draw\_map@{draw\_map}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{draw\_map()}{draw\_map()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::draw\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$}]{\+\_\+game\+Map,  }\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{name\+Game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the game map. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a64b39d001f23a42f2f3179d19e4910fa}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_abd50267268183e42d4a2b5633f27fbb6}\label{class_l_i_b___s_d_l2_abd50267268183e42d4a2b5633f27fbb6} 
+\index{LIB\_SDL2@{LIB\_SDL2}!draw\_playerName@{draw\_playerName}}
+\index{draw\_playerName@{draw\_playerName}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{draw\_playerName()}{draw\_playerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::draw\+\_\+player\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the player\textquotesingle{}s name. 
+
+Implements \mbox{\hyperlink{class_i_graphic_aff37495c63afd4b111f4c497c21b74d0}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a3058dacc5a9127e9c7f70aec41126cdd}\label{class_l_i_b___s_d_l2_a3058dacc5a9127e9c7f70aec41126cdd} 
+\index{LIB\_SDL2@{LIB\_SDL2}!draw\_score@{draw\_score}}
+\index{draw\_score@{draw\_score}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{draw\_score()}{draw\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::draw\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the score. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a247c864611c4263e89bf64b4a4f8bbce}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_afb26fef1312e18820dbad9dd9846c663}\label{class_l_i_b___s_d_l2_afb26fef1312e18820dbad9dd9846c663} 
+\index{LIB\_SDL2@{LIB\_SDL2}!end\_menu@{end\_menu}}
+\index{end\_menu@{end\_menu}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{end\_menu()}{end\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::end\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{player\+Name,  }\item[{\mbox{\hyperlink{class_loader}{int}}}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Generates the end game menu. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a64d6702274e232a898cb69b2ccc028f1}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a9fb58cfabbff03663afa34bdf53bddcb}\label{class_l_i_b___s_d_l2_a9fb58cfabbff03663afa34bdf53bddcb} 
+\index{LIB\_SDL2@{LIB\_SDL2}!game\_menu@{game\_menu}}
+\index{game\_menu@{game\_menu}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{game\_menu()}{game\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::game\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$}]{\+\_\+game\+Map,  }\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{name\+Game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Generates the game menu. 
+
+Implements \mbox{\hyperlink{class_i_graphic_af9bda9f05466bef41d8d7a537b644227}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ac95df59209f01a7f4857f6172ebdf8f5}\label{class_l_i_b___s_d_l2_ac95df59209f01a7f4857f6172ebdf8f5} 
+\index{LIB\_SDL2@{LIB\_SDL2}!get\_nameLib@{get\_nameLib}}
+\index{get\_nameLib@{get\_nameLib}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{get\_nameLib()}{get\_nameLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::get\+\_\+name\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gets the name of the graphics library. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a0196981d96d06c069b5854ddbef823f9}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a5303e74e340efb876c5d5139ffa0451c}\label{class_l_i_b___s_d_l2_a5303e74e340efb876c5d5139ffa0451c} 
+\index{LIB\_SDL2@{LIB\_SDL2}!get\_playerName@{get\_playerName}}
+\index{get\_playerName@{get\_playerName}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{get\_playerName()}{get\_playerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::get\+\_\+player\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gets the player\textquotesingle{}s name. 
+
+Implements \mbox{\hyperlink{class_i_graphic_ab6d8efcd6246dc766d26bc38c2f30dea}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a71d55d8d5aec7468e319bac663dd654c}\label{class_l_i_b___s_d_l2_a71d55d8d5aec7468e319bac663dd654c} 
+\index{LIB\_SDL2@{LIB\_SDL2}!get\_selectedItem@{get\_selectedItem}}
+\index{get\_selectedItem@{get\_selectedItem}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{get\_selectedItem()}{get\_selectedItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} LIB\+\_\+\+SDL2\+::get\+\_\+selected\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gets the index of the selected item. 
+
+Implements \mbox{\hyperlink{class_i_graphic_ae10d8f583975a23d4dc5837915b705f6}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a968d5af34bd719ff1d3f8364984c7441}\label{class_l_i_b___s_d_l2_a968d5af34bd719ff1d3f8364984c7441} 
+\index{LIB\_SDL2@{LIB\_SDL2}!init@{init}}
+\index{init@{init}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initializes the SDL2 graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a4ffea6a61d7e2d862f01f45ecfaf07cf}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ad3cba03c1c9ce572b9b88a71ce024cdb}\label{class_l_i_b___s_d_l2_ad3cba03c1c9ce572b9b88a71ce024cdb} 
+\index{LIB\_SDL2@{LIB\_SDL2}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Generates the main menu. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a83cb988e5dfc45237fdb9c44c6a9e160}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_aa340ba7211f146695e1388c6fc6890d7}\label{class_l_i_b___s_d_l2_aa340ba7211f146695e1388c6fc6890d7} 
+\index{LIB\_SDL2@{LIB\_SDL2}!pause@{pause}}
+\index{pause@{pause}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Pauses the graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a6e6f477667aca13b82edc614a02f11ff}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a6b85e907d690669e6b7cd4139b55e1f4}\label{class_l_i_b___s_d_l2_a6b85e907d690669e6b7cd4139b55e1f4} 
+\index{LIB\_SDL2@{LIB\_SDL2}!pause\_menu@{pause\_menu}}
+\index{pause\_menu@{pause\_menu}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{pause\_menu()}{pause\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::pause\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Generates the pause menu. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a04e504c9f56896ba97580c244b8de4b1}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a5e0b00db3bf63c0ea3fa8b32f6f356ab}\label{class_l_i_b___s_d_l2_a5e0b00db3bf63c0ea3fa8b32f6f356ab} 
+\index{LIB\_SDL2@{LIB\_SDL2}!set\_nameLib@{set\_nameLib}}
+\index{set\_nameLib@{set\_nameLib}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{set\_nameLib()}{set\_nameLib()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::set\+\_\+name\+Lib (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the name of the graphics library. 
+
+Implements \mbox{\hyperlink{class_i_graphic_af61c9813742b5c01c684467d56f8f4cb}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a8156fdb26bb902a1824c290084245f5b}\label{class_l_i_b___s_d_l2_a8156fdb26bb902a1824c290084245f5b} 
+\index{LIB\_SDL2@{LIB\_SDL2}!set\_playerName@{set\_playerName}}
+\index{set\_playerName@{set\_playerName}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{set\_playerName()}{set\_playerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::set\+\_\+player\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the player\textquotesingle{}s name. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a884da0f536c44fd6d505989a23f1f602}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ac0a81d3b140fddda9e0a8f6f1ee36077}\label{class_l_i_b___s_d_l2_ac0a81d3b140fddda9e0a8f6f1ee36077} 
+\index{LIB\_SDL2@{LIB\_SDL2}!set\_selectedItem@{set\_selectedItem}}
+\index{set\_selectedItem@{set\_selectedItem}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{set\_selectedItem()}{set\_selectedItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::set\+\_\+selected\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the selected item index. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a3fb14dfc43332c2e0213cfffa0824dff}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a25a61ef9ffd86b1beb6569343a0e6630}\label{class_l_i_b___s_d_l2_a25a61ef9ffd86b1beb6569343a0e6630} 
+\index{LIB\_SDL2@{LIB\_SDL2}!set\_volume@{set\_volume}}
+\index{set\_volume@{set\_volume}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{set\_volume()}{set\_volume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::set\+\_\+volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the volume level. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a97f81013601c788f9f74272671d3baf7}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a558db1b9f81c7fbf1f35a2875d4b8713}\label{class_l_i_b___s_d_l2_a558db1b9f81c7fbf1f35a2875d4b8713} 
+\index{LIB\_SDL2@{LIB\_SDL2}!settings\_menu@{settings\_menu}}
+\index{settings\_menu@{settings\_menu}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{settings\_menu()}{settings\_menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} LIB\+\_\+\+SDL2\+::settings\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Generates the settings menu. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a262b12c0e6eb9c0079e6f3b09aae71b4}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ab9494b9e98a37777104a60d4338cf367}\label{class_l_i_b___s_d_l2_ab9494b9e98a37777104a60d4338cf367} 
+\index{LIB\_SDL2@{LIB\_SDL2}!sound@{sound}}
+\index{sound@{sound}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{sound()}{sound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}}]{path\+Music,  }\item[{\mbox{\hyperlink{class_loader}{int}}}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Plays a sound. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a33a6bcaac835cc2f7327ebec74198fd0}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_ae0ff58af8aaf3ad6c8c2b4bdb8d852bd}\label{class_l_i_b___s_d_l2_ae0ff58af8aaf3ad6c8c2b4bdb8d852bd} 
+\index{LIB\_SDL2@{LIB\_SDL2}!stop@{stop}}
+\index{stop@{stop}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Stops the graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_a6e666a39fe92b331158b32da5f038b60}{IGraphic}}.
+
+\Hypertarget{class_l_i_b___s_d_l2_a43506d1b2b805f9f2efa3bfc9b92ba27}\label{class_l_i_b___s_d_l2_a43506d1b2b805f9f2efa3bfc9b92ba27} 
+\index{LIB\_SDL2@{LIB\_SDL2}!update@{update}}
+\index{update@{update}!LIB\_SDL2@{LIB\_SDL2}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} LIB\+\_\+\+SDL2\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Updates the graphics. 
+
+Implements \mbox{\hyperlink{class_i_graphic_ad6984e987ed7995e0361bdc25736fcec}{IGraphic}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graphic/\+Sdl2/\mbox{\hyperlink{lib___sdl2_8hpp}{lib\+\_\+\+Sdl2.\+hpp}}\item 
+src/\+Graphic/\+Sdl2/\mbox{\hyperlink{lib___sdl2_8cpp}{lib\+\_\+\+Sdl2.\+cpp}}\end{DoxyCompactItemize}

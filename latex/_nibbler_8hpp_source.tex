@@ -1,0 +1,88 @@
+\doxysection{Nibbler.\+hpp}
+\hypertarget{_nibbler_8hpp_source}{}\label{_nibbler_8hpp_source}\index{src/Game/Nibbler/Nibbler.hpp@{src/Game/Nibbler/Nibbler.hpp}}
+\mbox{\hyperlink{_nibbler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ NIBBLER\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ NIBLLER\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_lib_8hpp}{../IGameLib.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nibbler}{Nibbler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_game_lib}{IGameLib}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nibbler_ad19e09642ac1516e78109a3c1f43995c}{Nibbler}}();\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nibbler_a03b98f06bc1f845f57aa15f034f0467e}{\string~Nibbler}}();\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_a286931643cc9d3cb89adab5222cbe5b8}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_ad1df2029c3e773c6bca8c433a0101db4}{stop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_a9df2d0e5544e83d944adb520d36708d5}{update\_game}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_afd67834b9b35434f4c5402100eb21d89}{update\_map}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nibbler_a494e76186910dc918d0476e31d541ecc}{move}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{nextDirection}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{prevDirection}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getter}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nibbler_a90e3d4ff3bf6cfa19e388dbb5c55ae27}{get\_score}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::tuple<char,\ std::string,\ int,\ int>}}>\ \mbox{\hyperlink{class_nibbler_a72d2ae03d07013b6ed7ea4a65c60518b}{get\_gameMap}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_nibbler_af19b3649a154b996618c4980bf4c9080}{get\_gameName}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_nibbler_adb5643f428ee953e0272646c046e69cf}{get\_gameOver}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_nibbler_ace26c7b88a4b472e8bcd45cb72093814}{get\_nbFood}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setter}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_af1ffe94a26f23f72e7f9375d1a694947}{set\_score}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{scoreValue}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nibbler_a6219a93f6262c0aab2e84aa351b317d6}{set\_gameMap}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::tuple<char,\ std::string,\ int,\ int>}}\&\ \mbox{\hyperlink{class_loader}{entry}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::tuple<char,\ std::string,\ int,\ int>}}>\ \_gameMap;\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_score;\ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_posXHead;\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_posYHead;\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::tuple<int,\ int,\ int,\ int,\ int>}}>\ \_nibbler;\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_gameOver;\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_nbFood;\ }
+\DoxyCodeLine{00119\ \};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_i_core_8hpp_a99f26e6ee9fcd62f75203b5402df8098}{direction}}}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a99f26e6ee9fcd62f75203b5402df8098a3961740aa293a50c701d278225f7050a}{top}},\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a99f26e6ee9fcd62f75203b5402df8098a00156fc42b17a87d0746d97b42caf296}{down}},\ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab0ac36b187aa60c167ffcead3d5a03c0}{left}},\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a99f26e6ee9fcd62f75203b5402df8098af763d610923b0c4614e8ecd65212666a}{right}},\ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a99f26e6ee9fcd62f75203b5402df8098ab7e4e0120a041dbe6528b050c04269e0}{none}}\ }
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_nibbler_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}}}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da04f1b071f494983129aefb83ff7e90bd}{head}},\ }
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da441239ef907ce5dd02c6c1f5c35fb1d5}{body}},\ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_a7aead736a07eaf25623ad7bfa1f0ee2da0a43f55b88ad4afbeb0ded9f5e748d0a}{tail}}\ }
+\DoxyCodeLine{00141\ \};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90}{state}}}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90ab110da32531ee3b7a96e7d39d1e3acf8}{head\_up}},\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1a2c3605bdff6cb7c0e66459decf3140}{head\_down}},\ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90af0ee8c575c9eec5b44d400a0f25ac117}{head\_left}},\ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a323acb93a9dab444d160bdc5991a4aca}{head\_right}},\ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a1fff443856da61f95171c686081f48d2}{body\_vertical}},\ }
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a5c6692f375f62cede8b8566e7dd41605}{body\_horizontal}},\ }
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a6328284b1b8e38ed106b9cab61212c47}{body\_topleft}},\ }
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a54f2f17a9d277168601fb03223175c48}{body\_topright}},\ }
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a95b44b3f0f08b8fd53a8cef713e6f193}{body\_bottomleft}},\ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a068abf7b129c92f2cb1c40731fd5e85a}{body\_bottomright}},\ }
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a7b06702655fcd4e8e908510af0bc91d8}{tail\_up}},\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a424bd2bce50a6cb97ff209757ddfa093}{tail\_down}},\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90a9c5fdfd446f4ee9e8867864883145a46}{tail\_left}},\ }
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{_nibbler_8hpp_adc6e5733fc3c22f0a7b2914188c49c90afe045cb390c9bbb4123445bcbf41d0df}{tail\_right}}\ }
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !NIBBLER\_HPP}}
+
+\end{DoxyCode}

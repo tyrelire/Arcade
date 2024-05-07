@@ -1,0 +1,92 @@
+\doxysection{Loader.\+hpp}
+\hypertarget{_loader_8hpp_source}{}\label{_loader_8hpp_source}\index{src/Core/Loader.hpp@{src/Core/Loader.hpp}}
+\mbox{\hyperlink{_loader_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <dlfcn.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ClassContainer>}
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_loader}{Loader}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{Loader}}()\ :\ \mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}(\mbox{\hyperlink{class_loader}{nullptr}}),\ \mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\_path}}(\mbox{\hyperlink{class_loader_af6621e31e06ac15d073f47f13cdd377b}{pathLib}}()),\ \mbox{\hyperlink{class_loader_ab3c9d1ed34704659e5c5facfa60a3472}{\_lib}}(0)\ \{\}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_ae511c54df3ef261c87947b7e43353a89}{Loader}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\&\ \mbox{\hyperlink{class_loader}{fn}})\ :\ \mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}(\mbox{\hyperlink{class_loader}{dlopen}}(\mbox{\hyperlink{class_loader}{fn}}.\mbox{\hyperlink{class_loader}{c\_str}}(),\ \mbox{\hyperlink{class_loader}{RTLD\_LAZY}})),\ \mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\_path}}(\mbox{\hyperlink{class_loader_af6621e31e06ac15d073f47f13cdd377b}{pathLib}}())\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_ab3c9d1ed34704659e5c5facfa60a3472}{\_lib}}\ =\ \mbox{\hyperlink{class_loader_af29045a01e1d57e17132cfc21eb7fdd7}{currLib}}(\mbox{\hyperlink{class_loader}{fn}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_a8e24e5b8c7afa8fc2849dfe7d6cc20ee}{\string~Loader}}()\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}\ !=\ \textcolor{keyword}{nullptr})\ ?\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{dlclose}}(\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}})\ :\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{ClassContainer}}*\ \mbox{\hyperlink{class_loader_afda3c3422a4dcb129847e92d50fd63fb}{currInst}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\&\ \mbox{\hyperlink{class_loader}{param}})\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{ClassContainer}}*\ \mbox{\hyperlink{class_loader}{layer}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{class_loader}{ClassContainer}}*\ (*create\_t)();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{create\_t}}\ \mbox{\hyperlink{class_loader}{create}}\ =\ \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{class_loader}{create\_t}}\textcolor{keyword}{>}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{dlsym}}(\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}},\ \mbox{\hyperlink{class_loader}{param}}.c\_str()));}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_loader}{create}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{layer}}\ =\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{create}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::cerr}}\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ find\ "{}}\ <<\ \mbox{\hyperlink{class_loader}{param}}\ <<\ \textcolor{stringliteral}{"{}\ in\ library\(\backslash\)n"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::cerr}}\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ load\ library\(\backslash\)n"{}}\ <<\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{dlerror}}()\ <<\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::endl}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{layer}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::string>}}\ \mbox{\hyperlink{class_loader_af6621e31e06ac15d073f47f13cdd377b}{pathLib}}()\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{DIR}}\ *\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{Directory}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{class_loader}{dirent}}\ *\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{ent}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::string>}}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{location}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{class_loader}{Directory}}\ =\ \mbox{\hyperlink{class_loader}{opendir}}\ (\textcolor{stringliteral}{"{}./lib"{}}))\ !=\ \mbox{\hyperlink{class_loader}{NULL}})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{class_loader}{dirent}}*\ \mbox{\hyperlink{class_loader}{ent}}\ =\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{readdir}}(\mbox{\hyperlink{class_loader}{Directory}});\ \mbox{\hyperlink{class_loader}{ent}}\ !=\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{NULL}};\ \mbox{\hyperlink{class_loader}{ent}}\ =\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{readdir}}(\mbox{\hyperlink{class_loader}{Directory}}))\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_loader}{ent}}-\/>d\_name[0]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{tmp}}\ =\ \textcolor{stringliteral}{"{}./lib/"{}}\ +\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}(\mbox{\hyperlink{class_loader}{ent}}-\/>d\_name);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{location}}.push\_back(\mbox{\hyperlink{class_loader}{tmp}});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{closedir}}\ (\mbox{\hyperlink{class_loader}{Directory}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::cerr}}\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ open\ directory"{}}\ <<\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::endl}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{location}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loader_a7af00249b688d3c50eb98d54fdb6bcfe}{swapLib}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_loader}{fn}})\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{dlclose}}(\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}});}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}}\ =\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{dlopen}}(\mbox{\hyperlink{class_loader}{fn}},\ \mbox{\hyperlink{class_loader}{RTLD\_LAZY}});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader_af29045a01e1d57e17132cfc21eb7fdd7}{currLib}}(\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::string}}\ \mbox{\hyperlink{class_loader}{lib}})\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader}{i}}\ =\ 0;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_loader}{i}}\ <\ \mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\_path}}.size())\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\_path}}[\mbox{\hyperlink{class_loader}{i}}]\ ==\ \mbox{\hyperlink{class_loader}{lib}})\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{i}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader}{i}}++;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{class_loader_acc39a7024e3f554d5ad98385fc3587c3}{\_loadedLib}};\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std::vector<std::string>}}\ \mbox{\hyperlink{class_loader_ab2e1ea2874c23c2799ba365026834bbf}{\_path}};\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader_ab3c9d1ed34704659e5c5facfa60a3472}{\_lib}};\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader_a2a32345d6a80f19b4c83c494aa6fedff}{loadSDL2}};\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader_ab640c590b3f8bbb4dcd852cd19480167}{loadNCURSES}};\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_loader_af51846427a6a7ac03b6731b74b7579c9}{loadSFML}};\ }
+\DoxyCodeLine{00140\ \};}
+
+\end{DoxyCode}

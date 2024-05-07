@@ -1,0 +1,280 @@
+\doxysection{Snake Class Reference}
+\hypertarget{class_snake}{}\label{class_snake}\index{Snake@{Snake}}
+
+
+Implementation of the \doxylink{class_snake}{Snake} game logic.  
+
+
+
+
+{\ttfamily \#include $<$Snake.\+hpp$>$}
+
+Inheritance diagram for Snake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_snake}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}{Snake}} ()
+\item 
+\mbox{\hyperlink{class_snake_a941fbaad96ee33ca3a7c30c28ca44ef8}{\texorpdfstring{$\sim$}{\string~}\+Snake}} ()
+\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_af62b5fdc7ecc9fe5f27b122b7b197d14}{init}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_a35a7a4894f467c275be6310ecdac1cb4}{stop}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_ac104c61659905143ea79cb6e44fcdbc0}{update\+\_\+game}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_snake}{Snake} game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_a325903d673a89f45a97b99fe20114705}{update\+\_\+map}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_snake}{Snake} game map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_snake_a63fabad5aab8c8ad05e1313a6330cde8}{move}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{next\+Direction}}, \mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{prev\+Direction}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Moves the \doxylink{class_snake}{Snake} player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_snake_aef50b7acc26591ba8d7c001932537179}{get\+\_\+score}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the current score of the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ \mbox{\hyperlink{class_snake_ab1220e5678ee15d4bf11b8637fb5371a}{get\+\_\+game\+Map}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the game map of the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} \mbox{\hyperlink{class_snake_ad46de4997f288f4ae333f46b610ae817}{get\+\_\+game\+Name}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{bool}} \mbox{\hyperlink{class_snake_a47387c03fffb5412665d6f2f3367f1d0}{get\+\_\+game\+Over}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_snake}{Snake} game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_snake_a51d7e3bc5701e9676f57041af4053c90}{get\+\_\+nb\+Food}} () \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Gets the number of food items in the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_acf43f69db9d0f80a2f26874dfb41d1cb}{set\+\_\+score}} (\mbox{\hyperlink{class_loader}{int}} \mbox{\hyperlink{class_loader}{score\+Value}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Sets the score of the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loader}{void}} \mbox{\hyperlink{class_snake_a7ffc5da83c8f31594f9e71ed8f40306c}{set\+\_\+game\+Map}} (\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&\mbox{\hyperlink{class_loader}{entry}}) \mbox{\hyperlink{class_loader}{override}}
+\begin{DoxyCompactList}\small\item\em Sets the game map entry of the \doxylink{class_snake}{Snake} game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{class_snake}{Snake} game logic. 
+
+This class inherits from \doxylink{class_i_game_lib}{IGame\+Lib} and provides concrete implementations for the \doxylink{class_snake}{Snake} game logic. It includes methods for initializing the game, stopping it, updating game state, handling player movement, and accessing/modifying game data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}\label{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor for initializing the \doxylink{class_snake}{Snake} game. \Hypertarget{class_snake_a941fbaad96ee33ca3a7c30c28ca44ef8}\label{class_snake_a941fbaad96ee33ca3a7c30c28ca44ef8} 
+\index{Snake@{Snake}!````~Snake@{\texorpdfstring{$\sim$}{\string~}Snake}}
+\index{````~Snake@{\texorpdfstring{$\sim$}{\string~}Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Snake()}{\string~Snake()}}
+{\footnotesize\ttfamily Snake\+::\texorpdfstring{$\sim$}{\string~}\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for cleaning up \doxylink{class_snake}{Snake} game resources. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_snake_ab1220e5678ee15d4bf11b8637fb5371a}\label{class_snake_ab1220e5678ee15d4bf11b8637fb5371a} 
+\index{Snake@{Snake}!get\_gameMap@{get\_gameMap}}
+\index{get\_gameMap@{get\_gameMap}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_gameMap()}{get\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::vector}}$<$ \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ $>$ Snake\+::get\+\_\+game\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the game map of the \doxylink{class_snake}{Snake} game. 
+
+\begin{DoxyReturn}{Returns}
+Vector of tuples representing game elements. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a8f2c5f9f6e68397d5c7db3a14b2d326a}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_ad46de4997f288f4ae333f46b610ae817}\label{class_snake_ad46de4997f288f4ae333f46b610ae817} 
+\index{Snake@{Snake}!get\_gameName@{get\_gameName}}
+\index{get\_gameName@{get\_gameName}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_gameName()}{get\_gameName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}} Snake\+::get\+\_\+game\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the \doxylink{class_snake}{Snake} game. 
+
+\begin{DoxyReturn}{Returns}
+The name of the game. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a97e07ac2f42cf91bfef1df378b569aa2}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a47387c03fffb5412665d6f2f3367f1d0}\label{class_snake_a47387c03fffb5412665d6f2f3367f1d0} 
+\index{Snake@{Snake}!get\_gameOver@{get\_gameOver}}
+\index{get\_gameOver@{get\_gameOver}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_gameOver()}{get\_gameOver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{bool}} Snake\+::get\+\_\+game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the \doxylink{class_snake}{Snake} game is over. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a009fa212618178e6cc6775504e985937}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a51d7e3bc5701e9676f57041af4053c90}\label{class_snake_a51d7e3bc5701e9676f57041af4053c90} 
+\index{Snake@{Snake}!get\_nbFood@{get\_nbFood}}
+\index{get\_nbFood@{get\_nbFood}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_nbFood()}{get\_nbFood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Snake\+::get\+\_\+nb\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of food items in the \doxylink{class_snake}{Snake} game. 
+
+\begin{DoxyReturn}{Returns}
+The number of food items. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_affa2085310b94a1ad3aee49cfef29f1c}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_aef50b7acc26591ba8d7c001932537179}\label{class_snake_aef50b7acc26591ba8d7c001932537179} 
+\index{Snake@{Snake}!get\_score@{get\_score}}
+\index{get\_score@{get\_score}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_score()}{get\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Snake\+::get\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current score of the \doxylink{class_snake}{Snake} game. 
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a5f35cf7214da9691ede02eeadb10bcb8}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_af62b5fdc7ecc9fe5f27b122b7b197d14}\label{class_snake_af62b5fdc7ecc9fe5f27b122b7b197d14} 
+\index{Snake@{Snake}!init@{init}}
+\index{init@{init}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the \doxylink{class_snake}{Snake} game. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a1f8e7ddf8f3460c10c4235736ec9f50f}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a63fabad5aab8c8ad05e1313a6330cde8}\label{class_snake_a63fabad5aab8c8ad05e1313a6330cde8} 
+\index{Snake@{Snake}!move@{move}}
+\index{move@{move}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{int}} Snake\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{next\+Direction,  }\item[{\mbox{\hyperlink{class_loader}{int}}}]{prev\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Moves the \doxylink{class_snake}{Snake} player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Direction} & The next direction the player intends to move. \\
+\hline
+{\em prev\+Direction} & The previous direction the player was moving in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the move operation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a5555cb426513f5c1aede42561ea841e2}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a7ffc5da83c8f31594f9e71ed8f40306c}\label{class_snake_a7ffc5da83c8f31594f9e71ed8f40306c} 
+\index{Snake@{Snake}!set\_gameMap@{set\_gameMap}}
+\index{set\_gameMap@{set\_gameMap}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{set\_gameMap()}{set\_gameMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::set\+\_\+game\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{const}} \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::tuple}}$<$ \mbox{\hyperlink{class_loader}{char}}, \mbox{\hyperlink{class_loader_acb3f79d04feaa67c1653704043f5d45e}{std\+::string}}, \mbox{\hyperlink{class_loader}{int}}, \mbox{\hyperlink{class_loader}{int}} $>$ \&}]{entry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the game map entry of the \doxylink{class_snake}{Snake} game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The tuple representing a game element to set in the game map. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a1398ebafdd163a4f942efc43cb0bef4f}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_acf43f69db9d0f80a2f26874dfb41d1cb}\label{class_snake_acf43f69db9d0f80a2f26874dfb41d1cb} 
+\index{Snake@{Snake}!set\_score@{set\_score}}
+\index{set\_score@{set\_score}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{set\_score()}{set\_score()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::set\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_loader}{int}}}]{score\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the score of the \doxylink{class_snake}{Snake} game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score\+Value} & The value to set as the score. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_a2563521e2483f21e1c9b1a1529920416}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a35a7a4894f467c275be6310ecdac1cb4}\label{class_snake_a35a7a4894f467c275be6310ecdac1cb4} 
+\index{Snake@{Snake}!stop@{stop}}
+\index{stop@{stop}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops the \doxylink{class_snake}{Snake} game. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aceaf4d20ad26ba2a5de324ecf7b167a0}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_ac104c61659905143ea79cb6e44fcdbc0}\label{class_snake_ac104c61659905143ea79cb6e44fcdbc0} 
+\index{Snake@{Snake}!update\_game@{update\_game}}
+\index{update\_game@{update\_game}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{update\_game()}{update\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::update\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_snake}{Snake} game state. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aaaabc92f0f1c29b33fe590c23a5a7d89}{IGame\+Lib}}.
+
+\Hypertarget{class_snake_a325903d673a89f45a97b99fe20114705}\label{class_snake_a325903d673a89f45a97b99fe20114705} 
+\index{Snake@{Snake}!update\_map@{update\_map}}
+\index{update\_map@{update\_map}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{update\_map()}{update\_map()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loader}{void}} Snake\+::update\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_snake}{Snake} game map. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_lib_aef14660ca3d93a570f39926ac0f0cf3f}{IGame\+Lib}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game/\+Snake/\mbox{\hyperlink{_snake_8hpp}{Snake.\+hpp}}\item 
+src/\+Game/\+Snake/\mbox{\hyperlink{_snake_8cpp}{Snake.\+cpp}}\end{DoxyCompactItemize}
